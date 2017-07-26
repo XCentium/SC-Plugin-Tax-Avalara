@@ -1,0 +1,1336 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Xcentium.Tax.Avalara</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.ConfigureSitecore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>The configure services.</summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Constants">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Constants.Tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.CartNullText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.TaxFee">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.ShippingChargePath">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.Lang">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.Weight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.ItemId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.Us">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.Ca">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.ProductTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.HlSubPrintTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.SitecoreItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.AllOthers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Plugin.Xcentium.Tax.Avalara.Constants.Tax.CartLineNullText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.RequestLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.amount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.taxCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.itemCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.RequestLine.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipFrom.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.ShipTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipTo.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipTo.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipTo.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipTo.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ShipTo.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderOrigin.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.PointOfOrderAcceptance.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Addresses.shipFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Addresses.shipTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Addresses.pointOfOrderOrigin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Addresses.pointOfOrderAcceptance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.lines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.companyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.customerCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.purchaseOrderNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.commit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.currencyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraRequest.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Detail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.transactionLineId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.addressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.stateFIPS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.exemptAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.exemptReasonId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.inState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.jurisCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.jurisName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.jurisdictionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.signatureCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.stateAssignedNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.jurisType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.nonTaxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.nonTaxableRuleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.nonTaxableType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.rate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.rateRuleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.rateSourceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.serCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.sourcing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxAuthorityTypeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxRegionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxOverride">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.rateType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.rateTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.taxableUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.nonTaxableUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.exemptUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Detail.unitOfBasis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.LineLocationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LineLocationType.documentLineLocationTypeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LineLocationType.documentLineId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LineLocationType.documentAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LineLocationType.locationTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.lineNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.boundaryOverrideId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.customerUsageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.destinationAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.originAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.discountAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.exemptAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.exemptCertId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.exemptNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.isItemTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.isSSTP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.itemCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.lineAmount">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.ref1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.ref2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.reportingDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.revAccount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.sourcing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxCodeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxOverrideType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.businessIdentificationNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxOverrideAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxOverrideReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.taxIncluded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.details">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.lineLocationTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.ResponseLine.parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.boundaryLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.line2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.line3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.taxRegionId">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.latitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Address.longitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.LocationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LocationType.documentLocationTypeId">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LocationType.documentId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LocationType.documentAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.LocationType.locationTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Summary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.jurisType">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.jurisCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.jurisName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.taxAuthorityType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.stateAssignedNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.taxType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.taxName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.rateType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.taxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.rate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.nonTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.Summary.exemption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.Parameters2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.companyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.paymentDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.batchCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.currencyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.customerUsageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.customerVendorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.exemptNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.reconciled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.purchaseOrderNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.referenceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.salespersonCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.taxOverrideType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.taxOverrideAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.taxOverrideReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.totalAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.totalExempt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.totalTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.totalTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.totalTaxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.adjustmentReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.adjustmentDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.locked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.softwareVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.originAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.destinationAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.exchangeRateEffectiveDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.exchangeRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.isSellerImporterOfRecord">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.businessIdentificationNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.modifiedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.modifiedUserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.taxDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.lines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.locationTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.summary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Models.AvalaraResponse.parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartLinesTaxBlock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartLinesTaxBlock.#ctor(Sitecore.Commerce.Plugin.Management.IGetItemByPathPipeline)">
+            <summary>
+            
+            </summary>
+            <param name="getItemByPathPipeline"></param>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartLinesTaxBlock.ShippingParty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartLinesTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartTaxBlock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartTaxBlock.#ctor(Sitecore.Framework.Rules.IRuleEngine,Sitecore.Framework.Rules.IRuleCreator,Sitecore.Commerce.Plugin.Management.IGetItemByPathPipeline)">
+            <summary>
+            
+            </summary>
+            <param name="ruleEngine"></param>
+            <param name="ruleCreator"></param>
+            <param name="getItemByPathPipeline"></param>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartTaxBlock.ShippingParty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Block.UpdateCalculateCartTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.SitecoreItemFieldsCountryPolicyNew">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.SitecoreItemFieldsCountryPolicyNew.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.SitecoreItemFieldsCountryPolicyNew.ProductTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.SitecoreItemFieldsCountryPolicyNew.HlSubPrintTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.TaxHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.TaxHelper.GetFirstDecimalFromString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.Pipelines.Helper.TaxHelper.TranslateToProperties(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            
+            </summary>
+            <param name="itemModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.CompanyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.TestUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ProductionUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.InProductionMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.AccountId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromAddressLine1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromAddressLine2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromAddressLine3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromCity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromStateOrProvinceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromPostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Xcentium.Tax.Avalara.AvalaraPolicy.ShipFromCountryCode">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
