@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Xcentium Avalara Tax Plugin.</Description>
+    <Copyright>Â 2017 Xcentium. All rights reserved.</Copyright>
+    <VersionPrefix>1.0.2301</VersionPrefix>
+    <Authors>Xcentium</Authors>
+    <TargetFramework>net452</TargetFramework>
+    <AssemblyName>Plugin.Xcentium.Tax.Avalara</AssemblyName>
+    <PackageId>Plugin.Xcentium.Tax.Avalara</PackageId>
+    <PackageTags>Sitecore;Commerce;Plugin;Tax;Mayo</PackageTags>
+    <PackageReleaseNotes>release notes</PackageReleaseNotes>
+    <PackageIconUrl>http://www.xcentium.com/favicon.ico</PackageIconUrl>
+    <PackageProjectUrl>http://www.xcentium.com/contact</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.xcentium.com/company</PackageLicenseUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.Commerce.Plugin.Fulfillment" Version="1.0.2301" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Tax" Version="1.0.2301" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Management" Version="1.0.2301" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Compile Include="..\..\build\VersionInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
