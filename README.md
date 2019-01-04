@@ -35,7 +35,7 @@ How to Install
 	2a. under Sitecore.Commerce.Engine project, open the file named SitecoreServicesConfigurationExtensions.cs, look for a line with ```.Add<CalculateCartTaxBlock>()``` after that line, insert a line break and add ```.Add<UpdateCartTaxBlock>().After<CalculateCartTaxBlock>()```
 		
 
-3. For the frontend interface, go to Sitecore package installer and install the package Avalara Tax Package-9.0.0.zip [See figure 1.0 on the Avalara Setup Reference.docx](./Avalara Setup Reference.docx)
+3. For the frontend interface, go to Sitecore package installer and install the package Avalara Tax Package-9.0.0.zip [See figure 1.0 on the Avalara Setup Reference.docx](../Avalara Setup Reference.docx)
 
 4. Login to Sitecore content editor, on the ribbon, click on Commerce and click Update Data Templates
 
