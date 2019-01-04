@@ -2,18 +2,18 @@
 Sitecore Commerce Engine AVALARA Tax plugin (Sitecore Commerce 9)
 ======================================
 
-This plugin allows the user to integrate AVALARA as a tax calculation Method for the ecommerce site. 
+This plugin allows the user to integrate AVALARA as a tax calculation and reporting application for your Sitecore Experience Commerce site. 
 - It is very easy to integrate or extend to fit your needs.
-- If will fetch tax rates from AVALARA based on the item type and price and of the items in your cart or cartline.
+- If will fetch tax rates from AVALARA based on the tax code you assign to the product or variant in your cart.
 
 
 
 Features:
 ===========
-- You get to add your Configuration settings in Sitecore's launch Pad
+- You get to add your configuration settings in Sitecore's launch Pad
 - You can test connection and turn AvaTax calculation on or off using Launch Pad interface
 - You can add Tax code on the product or Variant level.
-- You can set tax code on a customer level.
+- You can set Entity Use Code or Excemption Number on a customer level.
 - You can opt in or out of tax reporting.
 
 
@@ -49,6 +49,8 @@ How to Install
 10. Go ahead add tax code to all your products and variants.
 
 11. Where a product or variant does not have a tax code, a taxcode of "P000000" is assumed
+
+12. You can also navigate to a customer using BizToool and set Entity Use Code or Excemption Number for that customer incase the customer is an institution excempted from being taxed.
 
 Note:
 =====
