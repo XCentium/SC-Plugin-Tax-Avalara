@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Avalara.AvaTax.RestClient;
+using Microsoft.Extensions.Logging;
 using Sitecore.Commerce.Core;
-using Sitecore.Commerce.Core.Commands;
 using Sitecore.Commerce.EntityViews.Commands;
 using Sitecore.Commerce.EntityViews;
 using Sitecore.Commerce.Plugin.Avalara.Components;
 using Sitecore.Commerce.Plugin.Avalara.Entities;
-using Sitecore.Commerce.Plugin.Avalara.Helpers;
 using Sitecore.Commerce.Plugin.Avalara.Models;
 using Sitecore.Commerce.Plugin.Carts;
 using Sitecore.Commerce.Plugin.Catalog;
@@ -19,7 +16,6 @@ using Sitecore.Commerce.Plugin.Customers;
 using Sitecore.Commerce.Plugin.Fulfillment;
 using Sitecore.Commerce.Plugin.Management;
 using Sitecore.Commerce.Plugin.Pricing;
-using Sitecore.Diagnostics;
 using Sitecore.Framework.Pipelines;
 
 namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
@@ -78,7 +74,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
 
             // Get config from Entity
             // var config = SitecoreItemHelper.GetConfiguration(context.CommerceContext, _getItemByPathPipeline);
-            var config = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), "Entity-AvalaraTaxEntity-1", false), context) as AvalaraTaxEntity;
+            var config = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), Constants.Tax.AvalaraTaxConfig, false), context) as AvalaraTaxEntity;
 
             // Abort if not found or Sitecore not available
             if (config == null)
@@ -91,6 +87,12 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
             {
                 return arg;
             }
+
+            var fulfillmentComponent = arg.GetComponent<PhysicalFulfillmentComponent>();
+
+            var shippingParty = fulfillmentComponent?.ShippingParty;
+
+            if (shippingParty == null) { return arg; }
 
             // Get AvalaraTaxCacheEntity
             var avalaraTaxCacheEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxCacheEntity), $"avalaraTaxCache{arg.Id}", false), context) as AvalaraTaxCacheEntity;
@@ -111,7 +113,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
             else
             {
                 // check if there has any changes since last created. 
-                if (CartHasChanged(arg, avalaraTaxCacheEntity))
+                if (CartHasChanged(arg, avalaraTaxCacheEntity, shippingParty))
                 {
                     updateTaxCalculation = true;
                 }
@@ -175,12 +177,6 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
 
                 }
 
-                var fulfillmentComponent = arg.GetComponent<PhysicalFulfillmentComponent>();
-
-                var shippingParty = fulfillmentComponent?.ShippingParty;
-
-                if (shippingParty == null) { return arg; }
-
                 var customer = arg.GetComponent<ContactComponent>();
 
                 var taxExcemptionNumber = string.Empty;
@@ -189,7 +185,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
                 if (customer.IsRegistered)
                 {
                     // Get the customer master entity view
-                    var entityView = await _getEntityViewCommand.Process(context.CommerceContext, customer.ShopperId, new int?(arg.EntityVersion), context.GetPolicy<KnownCustomerViewsPolicy>().Master, "", "");
+                    var entityView = await _getEntityViewCommand.Process(context.CommerceContext, customer.ShopperId, context.GetPolicy<KnownCustomerViewsPolicy>().Master, "", "");
 
                     if (entityView != null && entityView.ChildViews.Any())
                     {
@@ -360,6 +356,10 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
 
                     }
 
+                    avalaraTaxCacheEntity.Address1 = shippingParty.Address1;
+                    avalaraTaxCacheEntity.StateCode = shippingParty.StateCode;
+                    avalaraTaxCacheEntity.ZipPostalCode = shippingParty.ZipPostalCode;
+
                     // Persist the entity
                     var persistEntityArgument =
                         await this._persistEntityPipeline.Run(
@@ -371,7 +371,8 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
                 catch (Exception ex)
                 {
 
-                    Log.Error(ex.Message, this);
+                    context.Logger.LogError($"{this.Name}: Message={ex.Message}");
+                    await context.CommerceContext.AddMessage("Error", "DoActionConfigure.Run.Exception", new Object[] { ex }, ex.Message);
                 }
 
 
@@ -396,9 +397,15 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
             return arg;
         }
 
-        private static bool CartHasChanged(Cart arg, AvalaraTaxCacheEntity avalaraTaxCacheEntity)
+        private static bool CartHasChanged(Cart arg, AvalaraTaxCacheEntity avalaraTaxCacheEntity, Party shippingParty)
         {
             var carlLines = arg.Lines.ToList();
+
+            
+            // if shipping address has changed, return true
+            if (shippingParty.Address1 != avalaraTaxCacheEntity.Address1) { return true; }
+            if (shippingParty.StateCode != avalaraTaxCacheEntity.StateCode) { return true; }
+            if (shippingParty.ZipPostalCode != avalaraTaxCacheEntity.ZipPostalCode) { return true; }
 
             // if cart line count has changed, return true
             if (carlLines.Count != avalaraTaxCacheEntity.LineCount) { return true; }

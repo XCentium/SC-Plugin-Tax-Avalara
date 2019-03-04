@@ -27,7 +27,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.EntityViews
 
         public override Task<EntityView> Run(EntityView arg, CommercePipelineExecutionContext context)
         {
-            Condition.Requires(arg).IsNotNull($"{Name}: The argument cannot be null.");
+            Condition.Requires(arg).IsNotNull($"{Name}: {Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ArgumentNullText}");
 
             var request = this._viewCommander.CurrentEntityViewArgument(context.CommerceContext);
             var catalogViewsPolicy = context.GetPolicy<KnownCatalogViewsPolicy>();
@@ -81,8 +81,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.EntityViews
                         Name = Constants.View.AvalaraProductTaxSettingsView,
                         DisplayName = "Avalara Product Tax Settings",
                         EntityId = arg.EntityId,
-                        ItemId = string.Empty,
-                        EntityVersion = sellableItem.EntityVersion
+                        ItemId = string.Empty
                     };
 
                     arg.ChildViews.Add(view);
@@ -119,62 +118,6 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.EntityViews
             }
 
 
-
-
-/*
-
-            //================================================
-
-            var viewsPolicy = context.GetPolicy<KnownProductTaxSettingsViewsPolicy>();
-            var actionsPolicy = context.GetPolicy<KnownProductsTaxActionsPolicy>();
-
-
-
-            // Make sure that we target the correct views
-            if (string.IsNullOrEmpty(request.ViewName) ||
-                !request.ViewName.Equals(catalogViewsPolicy.Master, StringComparison.OrdinalIgnoreCase) &&
-                !request.ViewName.Equals(catalogViewsPolicy.Details, StringComparison.OrdinalIgnoreCase) &&
-                !request.ViewName.Equals(viewsPolicy.ProductSettings, StringComparison.OrdinalIgnoreCase) &&
-                !isVariationView &&
-                !isConnectView)
-            {
-                return Task.FromResult(arg);
-            }
-
-
-
-            // See if we are dealing with the base sellable item or one of its variations.
-            //var variationId = string.Empty;
-            if (isVariationView && !string.IsNullOrEmpty(arg.ItemId))
-            {
-                variationId = arg.ItemId;
-            }
-
-
-            // Check if the edit action was requested
-            var isEditView = !string.IsNullOrEmpty(arg.Action) && arg.Action.Equals(actionsPolicy.EditProductTaxSettings, StringComparison.OrdinalIgnoreCase);
-            if (!isEditView)
-            {
-                // Create a new view and add it to the current entity view.
-                var view = new EntityView
-                {
-                    Name = context.GetPolicy<KnownProductTaxSettingsViewsPolicy>().ProductSettings,
-                    DisplayName = "Avalara Tax Settings",
-                    EntityId = arg.EntityId,
-                    ItemId = variationId
-                };
-
-                arg.ChildViews.Add(view);
-
-                targetView = view;
-            }
-
-            if (sellableItem != null && (sellableItem.HasComponent<ProductTaxSettingsComponent>(variationId) || isConnectView || isEditView || isVariationView || ismasterView) )
-            {
-                var component = sellableItem.GetComponent<ProductTaxSettingsComponent>(variationId);
-                AddPropertiesToView(targetView, component, !isEditView);
-            }
-*/
             return Task.FromResult(arg);
         }
 

@@ -23,7 +23,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.DoActions
         }
         public override Task<EntityView> Run(EntityView arg, CommercePipelineExecutionContext context)
         {
-            Condition.Requires(arg).IsNotNull($"{Name}: The argument cannot be null.");
+            Condition.Requires(arg).IsNotNull($"{Name}: {Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ArgumentNullText}");
 
             var actionsPolicy = context.GetPolicy<KnownCustomerTaxActionsPolicy>();
 

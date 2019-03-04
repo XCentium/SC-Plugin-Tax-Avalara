@@ -14,7 +14,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
     {
         public override Task<Cart> Run(CartLineArgument arg, CommercePipelineExecutionContext context)
         {
-            Condition.Requires<CartLineArgument>(arg).IsNotNull<CartLineArgument>(string.Format("{0}: The argument cannot be null.", (object)(this.Name)));
+            Condition.Requires<CartLineArgument>(arg).IsNotNull<CartLineArgument>(string.Format("{0}: {Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ArgumentNullText}", (object)(this.Name)));
             // ISSUE: explicit non-virtual call
             Condition.Requires<Cart>(arg.Cart).IsNotNull<Cart>(string.Format("{0}: The cart cannot be null.", (object)(this.Name)));
             // ISSUE: explicit non-virtual call

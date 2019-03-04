@@ -14,17 +14,20 @@
   <ItemGroup>
     <PackageReference Include="Avalara.AvaTax" Version="18.9.0.234" />
     <PackageReference Include="Sitecore.Commerce.Core">
-      <Version>2.2.*</Version>
+      <Version>2.1.6</Version>
     </PackageReference>
-    <PackageReference Include="Sitecore.Commerce.Plugin.Catalog" Version="2.2.46" />
-    <PackageReference Include="Sitecore.Commerce.Plugin.Customers" Version="2.2.10" />
-    <PackageReference Include="Sitecore.Commerce.Plugin.Management" Version="2.2.9" />
-    <PackageReference Include="Sitecore.Commerce.Plugin.Tax" Version="2.2.22" />
-    <PackageReference Include="Sitecore.Commerce.Plugin.Views" Version="2.2.29" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Catalog" Version="2.1.10" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Customers" Version="2.1.4" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Management" Version="2.1.4" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Tax" Version="2.1.5" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Views" Version="2.1.6" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ConfigureServiceApiBlock.cs" />
     <Content Include="ConfigureSitecore.cs" />
+    <Content Include="Controllers\CommandsController.cs" />
+    <Content Include="Pipelines\Arguments\SampleArgument.cs" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Avalara.AvaTax.RestClient;
+using Microsoft.Extensions.Logging;
 using Serilog;
 using Sitecore.Commerce.Core;
 using Sitecore.Commerce.EntityViews;
@@ -71,7 +72,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
 
             // Get config from Entity
             // var config = SitecoreItemHelper.GetConfiguration(context.CommerceContext, _getItemByPathPipeline);
-            var config = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), "Entity-AvalaraTaxEntity-1", false), context) as AvalaraTaxEntity;
+            var config = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), Constants.Tax.AvalaraTaxConfig, false), context) as AvalaraTaxEntity;
 
 
             // Abort if not found or Sitecore not available
@@ -107,8 +108,8 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
             if (customer.IsRegistered)
             {
                 // Get the customer master entity view
-                var entityView = await _getEntityViewCommand.Process(context.CommerceContext, customer.ShopperId, new int?(arg.EntityVersion), context.GetPolicy<KnownCustomerViewsPolicy>().Master, "", "");
-
+                var entityView = await _getEntityViewCommand.Process(context.CommerceContext, customer.ShopperId, context.GetPolicy<KnownCustomerViewsPolicy>().Master, "", "");
+ 
                 if (entityView != null && entityView.ChildViews.Any())
                 {
                     // if no discount field return arg
@@ -299,13 +300,15 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks
                 else
                 {
                     Log.Error("Transaction Not Logged", this);
+                    context.Logger.LogError($"{this.Name}: Message=Transaction Not Logged");
+                    await context.CommerceContext.AddMessage("Error", "DoActionConfigure.Run.Exception", new Object[] { this }, "Transaction Not Logged");
                 }
 
             }
             catch (Exception ex)
             {
-
-                Log.Error(ex.Message, this);
+                context.Logger.LogError($"{this.Name}: Message={ex.Message}");
+                await context.CommerceContext.AddMessage("Error", "DoActionConfigure.Run.Exception", new Object[] { ex }, ex.Message);
             }
 
 

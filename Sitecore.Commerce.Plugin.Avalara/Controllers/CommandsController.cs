@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http.OData;
 using Avalara.AvaTax.RestClient;
@@ -9,27 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Sitecore.Commerce.Core;
 using Sitecore.Commerce.Plugin.Avalara.Entities;
-using Sitecore.Commerce.Plugin.Avalara.Helpers;
-using Sitecore.Commerce.Plugin.Catalog;
 using Sitecore.Commerce.Plugin.Management;
-using Sitecore.Framework.Pipelines;
 
 namespace Sitecore.Commerce.Plugin.Avalara.Controllers
 {
     public class CommandsController : CommerceController
     {
-
-
-        public CommandsController(IServiceProvider serviceProvider, CommerceEnvironment globalEnvironment, IGetItemByPathPipeline getItemByPathPipeline, IFindEntityPipeline findEntityPipeline, IPersistEntityPipeline persistEntityPipeline) 
+        public CommandsController(IServiceProvider serviceProvider, CommerceEnvironment globalEnvironment, IFindEntityPipeline findEntityPipeline, IPersistEntityPipeline persistEntityPipeline) 
             : base(serviceProvider, globalEnvironment)
         {
-            _getItemByPathPipeline = getItemByPathPipeline;
             _findEntity = findEntityPipeline;
             _persistEntityPipeline = persistEntityPipeline;
         }
 
         private readonly IFindEntityPipeline _findEntity;
-        private readonly IGetItemByPathPipeline _getItemByPathPipeline;
         private readonly IPersistEntityPipeline _persistEntityPipeline;
 
         /// <summary>
@@ -43,67 +33,33 @@ namespace Sitecore.Commerce.Plugin.Avalara.Controllers
         {
             // Get Entity
 
-            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), "Entity-AvalaraTaxEntity-1", false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
+            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), Constants.Tax.AvalaraTaxConfig, false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
 
             if (avalaraTaxEntity == null)
             {
-                return new ObjectResult(new { Success = false, Result = "Avalara Settings Missing" });
+                return new ObjectResult(new { Success = false, Result = Constants.Tax.AvalaraSettingsMissing });
             }
 
             if (avalaraTaxEntity.Enabled == false)
             {
-                return new ObjectResult(new { Success = false, Result = "Avalara Is Disabled" });
+                return new ObjectResult(new { Success = false, Result = Constants.Tax.AvalaraDisabled });
             }
-
-            #region Comment1
-
-            //// Get config from Sitecore
-            //var config = SitecoreItemHelper.GetConfiguration(this.CurrentContext.GetPipelineContextOptions().CommerceContext, _getItemByPathPipeline);
-
-            //if (config == null)
-            //{
-            //    return new ObjectResult(new { Success = false, Result = Constants.Tax.ConfigIsNull });
-            //}
-
-            //if (config.Enabled == false)
-            //{
-            //    return new ObjectResult(new { Success = false, Result = Constants.Tax.AvalaraDisabled, Config = config });
-            //}
-
-            //var client = new AvaTaxClient(config.AppName, config.AppVersion, Environment.MachineName, config.InProductionMode? AvaTaxEnvironment.Production : AvaTaxEnvironment.Sandbox)
-            //    .WithSecurity(config.UserName, config.Password);
-
-
-            #endregion
-
 
 
             var client = new AvaTaxClient(avalaraTaxEntity.AppName, avalaraTaxEntity.AppVersion, Environment.MachineName, avalaraTaxEntity.InProductionMode ? AvaTaxEnvironment.Production : AvaTaxEnvironment.Sandbox)
-                .WithSecurity(avalaraTaxEntity.UserName, avalaraTaxEntity.Password);
+                .WithSecurity(avalaraTaxEntity.AccountId, avalaraTaxEntity.LicenseKey);
 
             // Verify that we can ping successfully
             var pingResult = client.Ping();
-
-            #region Comment2
-                //// Create base transaction.
-                //var builder = new TransactionBuilder(client, avalaraTaxEntity.CompanyCode, DocumentType.SalesInvoice,"TaxOverrideCustomerCode")
-                //    .WithAddress(TransactionAddressType.SingleLocation, avalaraTaxEntity.ShipFromAddressLine1, null, null, avalaraTaxEntity.ShipFromCity, avalaraTaxEntity.ShipFromStateOrProvinceCode,
-                //        avalaraTaxEntity.ShipFromStateOrProvinceCode, avalaraTaxEntity.ShipFromCountryCode)
-                //    .WithLine(100.0m, 1, "P0000000")
-                //    .WithLine(200m);
-
-                //var transaction = builder.Create();
-            #endregion
-
 
 
             if (pingResult.authenticated != null && (bool)pingResult.authenticated)
             {
 
-                return new ObjectResult(new { Success = true, Result = "Connection Successful!" });
+                return new ObjectResult(new { Success = true, Result = Constants.Tax.AvalaraConnectionSuccessful });
             }
 
-            var result = new {Success = false, Result = "Error Connecting to Avalara. Invalid Credentials." };
+            var result = new {Success = false, Result = Constants.Tax.AvalaraConnectionError };
 
             return new ObjectResult(result);
         }
@@ -116,7 +72,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Controllers
 
 
             // Get Entity
-            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), "Entity-AvalaraTaxEntity-1", false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
+            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), Constants.Tax.AvalaraTaxConfig, false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
 
             if (avalaraTaxEntity == null) { return (IActionResult)new BadRequestObjectResult((object)value); }
 
@@ -134,66 +90,62 @@ namespace Sitecore.Commerce.Plugin.Avalara.Controllers
         public async Task<IActionResult> SaveAvalaraConfiguration([FromBody] ODataActionParameters value)
         {
 
-            if (!value.ContainsKey("CompanyCode")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("InProductionMode")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("Enabled")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("AccountId")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("LicenseKey")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("ShipFromAddressLine1")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("ShipFromCity")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("ShipFromStateOrProvinceCode")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("ShipFromPostalCode")) return (IActionResult)new BadRequestObjectResult((object)value);
-            if (!value.ContainsKey("ShipFromCountryCode")) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.CompanyCode)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.InProductionMode)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.Enabled)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.AccountId)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.LicenseKey)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.ShipFromAddressLine1)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.ShipFromCity)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.ShipFromStateOrProvinceCode)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.ShipFromPostalCode)) return (IActionResult)new BadRequestObjectResult((object)value);
+            if (!value.ContainsKey(Constants.Tax.ShipFromCountryCode)) return (IActionResult)new BadRequestObjectResult((object)value);
 
 
 
             // Get Entity
-            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), "Entity-AvalaraTaxEntity-1",false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
+            var avalaraTaxEntity = await _findEntity.Run(new FindEntityArgument(typeof(AvalaraTaxEntity), Constants.Tax.AvalaraTaxConfig,false), CurrentContext.GetPipelineContextOptions()) as AvalaraTaxEntity;
 
             if (avalaraTaxEntity == null)
             {
-                // 2777d5a8ef464ee8bd5dc29b1443cff5
-
                 avalaraTaxEntity = new AvalaraTaxEntity
                 {
-                    Id = "Entity-AvalaraTaxEntity-1",
-                    FriendlyId = "Entity-AvalaraTaxEntity-1"
+                    Id = Constants.Tax.AvalaraTaxConfig,
+                    FriendlyId = Constants.Tax.AvalaraTaxConfig
                 };
             }
 
-            avalaraTaxEntity.Id = "Entity-AvalaraTaxEntity-1";
-            avalaraTaxEntity.FriendlyId = "Entity-AvalaraTaxEntity-1";
+            avalaraTaxEntity.Id = Constants.Tax.AvalaraTaxConfig;
+            avalaraTaxEntity.FriendlyId = Constants.Tax.AvalaraTaxConfig;
 
-            avalaraTaxEntity.AccountId =int.Parse(value["AccountId"].ToString().Trim());// LicenseKey
-            avalaraTaxEntity.LicenseKey = value["LicenseKey"].ToString().Trim();// 
-            avalaraTaxEntity.AppName = value["AppName"].ToString().Trim();
-            avalaraTaxEntity.AppVersion = value["AppVersion"].ToString().Trim();
-            avalaraTaxEntity.CompanyCode = value["CompanyCode"].ToString().Trim();
-            avalaraTaxEntity.FreightCode = value["FreightCode"].ToString().Trim();
+            avalaraTaxEntity.AccountId =int.Parse(value[Constants.Tax.AccountId].ToString().Trim());
+            avalaraTaxEntity.LicenseKey = value[Constants.Tax.LicenseKey].ToString().Trim(); 
+            avalaraTaxEntity.AppName = value[Constants.Tax.AppName].ToString().Trim();
+            avalaraTaxEntity.AppVersion = value[Constants.Tax.AppVersion].ToString().Trim();
+            avalaraTaxEntity.CompanyCode = value[Constants.Tax.CompanyCode].ToString().Trim();
+            avalaraTaxEntity.FreightCode = value[Constants.Tax.FreightCode].ToString().Trim();
 
 
-            var inProductionMode = value["InProductionMode"]?.ToString().Trim() ?? string.Empty;
+            var inProductionMode = value[Constants.Tax.InProductionMode]?.ToString().Trim() ?? string.Empty;
                
             avalaraTaxEntity.InProductionMode = !string.IsNullOrEmpty(inProductionMode);
 
-            avalaraTaxEntity.ShipFromAddressLine1 = value["ShipFromAddressLine1"].ToString().Trim();
-            avalaraTaxEntity.ShipFromAddressLine2 = value["ShipFromAddressLine2"].ToString().Trim();
-            avalaraTaxEntity.ShipFromAddressLine3 = value["ShipFromAddressLine3"].ToString().Trim();
-            avalaraTaxEntity.ShipFromCity = value["ShipFromCity"].ToString().Trim();
-            avalaraTaxEntity.ShipFromCountryCode = value["ShipFromCountryCode"].ToString().Trim();
-            avalaraTaxEntity.ShipFromName = value["ShipFromName"].ToString().Trim();
-            avalaraTaxEntity.ShipFromPostalCode = value["ShipFromPostalCode"].ToString().Trim();
-            avalaraTaxEntity.ShipFromStateOrProvinceCode = value["ShipFromStateOrProvinceCode"].ToString().Trim();
+            avalaraTaxEntity.ShipFromAddressLine1 = value[Constants.Tax.ShipFromAddressLine1].ToString().Trim();
+            avalaraTaxEntity.ShipFromAddressLine2 = value[Constants.Tax.ShipFromAddressLine2].ToString().Trim();
+            avalaraTaxEntity.ShipFromAddressLine3 = value[Constants.Tax.ShipFromAddressLine3].ToString().Trim();
+            avalaraTaxEntity.ShipFromCity = value[Constants.Tax.ShipFromCity].ToString().Trim();
+            avalaraTaxEntity.ShipFromCountryCode = value[Constants.Tax.ShipFromCountryCode].ToString().Trim();
+            avalaraTaxEntity.ShipFromName = value[Constants.Tax.ShipFromName].ToString().Trim();
+            avalaraTaxEntity.ShipFromPostalCode = value[Constants.Tax.ShipFromPostalCode].ToString().Trim();
+            avalaraTaxEntity.ShipFromStateOrProvinceCode = value[Constants.Tax.ShipFromStateOrProvinceCode].ToString().Trim();
 
-            // bool.TryParse(value["Enabled"].ToString().Trim(), out var enabled);
-
-            var enabled = value["Enabled"]?.ToString().Trim() ?? string.Empty;
+            var enabled = value[Constants.Tax.Enabled]?.ToString().Trim() ?? string.Empty;
             avalaraTaxEntity.Enabled = !string.IsNullOrEmpty(enabled);
 
-            var disableReporting = value["DisableReporting"]?.ToString().Trim() ?? string.Empty;
+            var disableReporting = value[Constants.Tax.DisableReporting]?.ToString().Trim() ?? string.Empty;
             avalaraTaxEntity.DisableReporting = !string.IsNullOrEmpty(disableReporting);
 
-            var persistEntityArgument = await this._persistEntityPipeline.Run(new PersistEntityArgument((CommerceEntity)avalaraTaxEntity), this.CurrentContext.GetPipelineContext());
+            var persistEntityArgument = await this._persistEntityPipeline.Run(new PersistEntityArgument((CommerceEntity)avalaraTaxEntity), CurrentContext.GetPipelineContextOptions());
 
 
             return new ObjectResult(avalaraTaxEntity);

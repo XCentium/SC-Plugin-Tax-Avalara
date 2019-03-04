@@ -24,7 +24,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.EntityViews
         public override Task<EntityView> Run(EntityView arg, CommercePipelineExecutionContext context)
         {
 
-            Condition.Requires(arg).IsNotNull($"{Name}: The argument cannot be null.");
+            Condition.Requires(arg).IsNotNull($"{Name}: {Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ArgumentNullText}");
 
             var request = this._viewCommander.CurrentEntityViewArgument(context.CommerceContext);
 
@@ -70,8 +70,7 @@ namespace Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.EntityViews
                     Name = Constants.View.AvalaraCustomerTaxSettingsView,
                     DisplayName = "Avalara Customer Tax Settings",
                     EntityId = arg.EntityId,
-                    ItemId = arg.ItemId,
-                    EntityVersion = customer.EntityVersion
+                    ItemId = arg.ItemId
                 };
 
                 arg.ChildViews.Add(view);

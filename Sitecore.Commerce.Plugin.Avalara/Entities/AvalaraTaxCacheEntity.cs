@@ -18,5 +18,9 @@ namespace Sitecore.Commerce.Plugin.Avalara.Entities
 
         public List<LineTaxRecord> LinesTax { get; set; }
 
+        public string Address1 { get; set; }
+        public string StateCode { get; set; }
+        public string ZipPostalCode { get; set; }
+
     }
 }

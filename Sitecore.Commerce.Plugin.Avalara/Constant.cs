@@ -22,6 +22,7 @@ namespace Sitecore.Commerce.Plugin.Avalara
             /// 
             /// </summary>
             public const string CartNullText = "The cart cannot be null.";
+            public const string ArgumentNullText = "The argument cannot be null.";
 
             /// <summary>
             /// 
@@ -82,6 +83,7 @@ namespace Sitecore.Commerce.Plugin.Avalara
 
             public const string Enabled = "Enabled";
             public const string InProduction = "InProduction";
+            public const string InProductionMode = "InProductionMode";
             public const string CompanyCode = "CompanyCode";
             public const string TestUrl = "TestUrl";
             public const string ProdUrl = "ProdUrl";
@@ -98,7 +100,19 @@ namespace Sitecore.Commerce.Plugin.Avalara
             public const string AppName = "AppName";
             public const string AppVersion = "AppVersion";
             public const string ConfigIsNull = "Configuration settings is null"; 
-            public const string AvalaraDisabled = "Avalara is not enabled in Sitecore";
+            
+            public const string LicenseKey = "LicenseKey";
+            public const string FreightCode = "FreightCode";
+            public const string DisableReporting = "DisableReporting";
+
+            public const string ShipFromName = "ShipFromName";
+            public const string ShipFromAddressLine1 = "ShipFromAddressLine1";
+            public const string ShipFromAddressLine2 = "ShipFromAddressLine2";
+            public const string ShipFromAddressLine3 = "ShipFromAddressLine3";
+            public const string ShipFromCity = "ShipFromCity";
+            public const string ShipFromStateOrProvinceCode = "ShipFromStateOrProvinceCode";
+            public const string ShipFromPostalCode = "ShipFromPostalCode";
+            public const string ShipFromCountryCode = "ShipFromCountryCode";
 
             /// <summary>
             /// 
@@ -106,6 +120,22 @@ namespace Sitecore.Commerce.Plugin.Avalara
             public const string DefaultTaxCode = "P0000000";
             public const string DefaultTaxExcemptCode = "NT";
             public const string DefaultFreightCode = "FR020100";
+
+
+
+
+            public const string AvalaraTaxConfig = "Entity-AvalaraTaxEntity-1";
+            public const string AvalaraSettingsMissing = "Avalara Settings Missing";
+            public const string AvalaraDisabled = "Avalara Is Disabled";
+            public const string AvalaraConnectionSuccessful = "Connection Successful!";
+            public const string AvalaraConnectionError = "Error Connecting to Avalara. Invalid Credentials.";
+
+            public const string SaveAvalaraConfiguration = "SaveAvalaraConfiguration";
+            public const string GetAvalaraConfiguration = "GetAvalaraConfiguration";
+            public const string TestAvalaraConnection = "TestAvalaraConnection";
+            public const string Commands = "Commands";
+
+
 
         }
 
@@ -135,6 +165,8 @@ namespace Sitecore.Commerce.Plugin.Avalara
 
 
         }
+
+
     }
 }
 

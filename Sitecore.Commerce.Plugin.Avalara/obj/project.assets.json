@@ -1454,7 +1454,7 @@
           "lib/net46/Serilog.dll": {}
         }
       },
-      "Sitecore.Commerce.Core/2.2.29": {
+      "Sitecore.Commerce.Core/2.1.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.ApplicationInsights.AspNetCore": "2.2.0",
@@ -1463,8 +1463,8 @@
           "Microsoft.AspNetCore.OData": "6.0.0-alpha1-rtm-171013",
           "Microsoft.AspNetCore.WebUtilities": "2.0.0",
           "Serilog": "2.5.0",
-          "Sitecore.Framework.Caching.Diagnostics": "3.0.2",
-          "Sitecore.Framework.Caching.Memory": "3.0.2",
+          "Sitecore.Framework.Caching.Diagnostics": "3.0.0",
+          "Sitecore.Framework.Caching.Memory": "3.0.0",
           "Sitecore.Framework.Eventing": "3.0.0",
           "Sitecore.Framework.Pipelines": "4.0.1",
           "Sitecore.Framework.Runtime": "3.0.0"
@@ -1479,10 +1479,10 @@
           "lib/net462/Sitecore.Commerce.Core.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Availability/2.2.8": {
+      "Sitecore.Commerce.Plugin.Availability/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Catalog": "2.2.45"
+          "Sitecore.Commerce.Plugin.Catalog": "2.1.9"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Availability.dll": {}
@@ -1491,11 +1491,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Availability.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.BusinessUsers/2.2.29": {
+      "Sitecore.Commerce.Plugin.BusinessUsers/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Shops": "2.2.29",
-          "Sitecore.Commerce.Plugin.Views": "2.2.29"
+          "Sitecore.Commerce.Plugin.Shops": "2.1.6",
+          "Sitecore.Commerce.Plugin.Views": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.BusinessUsers.dll": {}
@@ -1504,10 +1504,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.BusinessUsers.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Carts/2.2.11": {
+      "Sitecore.Commerce.Plugin.Carts/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Pricing": "2.2.12"
+          "Sitecore.Commerce.Plugin.Pricing": "2.1.3"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Carts.dll": {}
@@ -1516,14 +1516,12 @@
           "lib/net462/Sitecore.Commerce.Plugin.Carts.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Catalog/2.2.46": {
+      "Sitecore.Commerce.Plugin.Catalog/2.1.10": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Composer": "2.2.29",
-          "Sitecore.Commerce.Plugin.EntityVersions": "2.2.29",
-          "Sitecore.Commerce.Plugin.Media": "2.2.29",
-          "Sitecore.Commerce.Plugin.Promotions": "2.2.3",
-          "Sitecore.Commerce.Plugin.Search": "2.2.9"
+          "Sitecore.Commerce.Plugin.Media": "2.1.6",
+          "Sitecore.Commerce.Plugin.Promotions": "2.1.6",
+          "Sitecore.Commerce.Plugin.Search": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Catalog.dll": {}
@@ -1532,22 +1530,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Catalog.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Composer/2.2.29": {
+      "Sitecore.Commerce.Plugin.Customers/2.1.4": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.BusinessUsers": "2.2.29"
-        },
-        "compile": {
-          "lib/net462/Sitecore.Commerce.Plugin.Composer.dll": {}
-        },
-        "runtime": {
-          "lib/net462/Sitecore.Commerce.Plugin.Composer.dll": {}
-        }
-      },
-      "Sitecore.Commerce.Plugin.Customers/2.2.10": {
-        "type": "package",
-        "dependencies": {
-          "Sitecore.Commerce.Plugin.Orders": "2.2.22"
+          "Sitecore.Commerce.Plugin.Orders": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Customers.dll": {}
@@ -1556,10 +1542,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Customers.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.DigitalItems/2.2.7": {
+      "Sitecore.Commerce.Plugin.DigitalItems/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Entitlements": "2.2.7"
+          "Sitecore.Commerce.Plugin.Entitlements": "2.1.3"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.DigitalItems.dll": {}
@@ -1568,10 +1554,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.DigitalItems.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Entitlements/2.2.7": {
+      "Sitecore.Commerce.Plugin.Entitlements/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Customers": "2.2.10"
+          "Sitecore.Commerce.Plugin.Customers": "2.1.4"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Entitlements.dll": {}
@@ -1580,23 +1566,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Entitlements.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.EntityVersions/2.2.29": {
+      "Sitecore.Commerce.Plugin.Fulfillment/2.1.5": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.ManagedLists": "2.2.29",
-          "Sitecore.Commerce.Plugin.Views": "2.2.29"
-        },
-        "compile": {
-          "lib/net462/Sitecore.Commerce.Plugin.EntityVersions.dll": {}
-        },
-        "runtime": {
-          "lib/net462/Sitecore.Commerce.Plugin.EntityVersions.dll": {}
-        }
-      },
-      "Sitecore.Commerce.Plugin.Fulfillment/2.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Sitecore.Commerce.Plugin.Orders": "2.2.22"
+          "Sitecore.Commerce.Plugin.Orders": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Fulfillment.dll": {}
@@ -1605,11 +1578,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Fulfillment.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.GiftCards/2.2.7": {
+      "Sitecore.Commerce.Plugin.GiftCards/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.DigitalItems": "2.2.7",
-          "Sitecore.Commerce.Plugin.Payments": "2.2.22"
+          "Sitecore.Commerce.Plugin.DigitalItems": "2.1.3",
+          "Sitecore.Commerce.Plugin.Payments": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.GiftCards.dll": {}
@@ -1618,10 +1591,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.GiftCards.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.ManagedLists/2.2.29": {
+      "Sitecore.Commerce.Plugin.ManagedLists/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Core": "2.2.29"
+          "Sitecore.Commerce.Core": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.ManagedLists.dll": {}
@@ -1630,14 +1603,15 @@
           "lib/net462/Sitecore.Commerce.Plugin.ManagedLists.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Management/2.2.9": {
+      "Sitecore.Commerce.Plugin.Management/2.1.4": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Fulfillment": "2.2.22",
-          "Sitecore.Commerce.Plugin.Returns": "2.2.4",
-          "Sitecore.Kernel.NoReferences": "9.0.180604",
-          "Sitecore.Services.Client.NoReferences": "9.0.180604",
-          "Sitecore.Services.Core.NoReferences": "9.0.180604"
+          "Sitecore.Commerce.Plugin.Fulfillment": "2.1.5",
+          "Sitecore.Commerce.Plugin.Media": "2.1.6",
+          "Sitecore.Commerce.Plugin.Returns": "2.1.3",
+          "Sitecore.Kernel.NoReferences": "9.0.171219",
+          "Sitecore.Services.Client.NoReferences": "9.0.171219",
+          "Sitecore.Services.Core.NoReferences": "9.0.171219"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Management.dll": {}
@@ -1646,10 +1620,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Management.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Media/2.2.29": {
+      "Sitecore.Commerce.Plugin.Media/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Views": "2.2.29"
+          "Sitecore.Commerce.Plugin.Views": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Media.dll": {}
@@ -1658,10 +1632,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Media.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Orders/2.2.22": {
+      "Sitecore.Commerce.Plugin.Orders/2.1.5": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Availability": "2.2.8"
+          "Sitecore.Commerce.Plugin.Availability": "2.1.3"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Orders.dll": {}
@@ -1670,10 +1644,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Orders.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Payments/2.2.22": {
+      "Sitecore.Commerce.Plugin.Payments/2.1.5": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Orders": "2.2.22"
+          "Sitecore.Commerce.Plugin.Orders": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Payments.dll": {}
@@ -1682,10 +1656,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Payments.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Pricing/2.2.12": {
+      "Sitecore.Commerce.Plugin.Pricing/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.BusinessUsers": "2.2.29"
+          "Sitecore.Commerce.Plugin.BusinessUsers": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Pricing.dll": {}
@@ -1694,11 +1668,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Pricing.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Promotions/2.2.3": {
+      "Sitecore.Commerce.Plugin.Promotions/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Carts": "2.2.11",
-          "Sitecore.Commerce.Plugin.Search": "2.2.9"
+          "Sitecore.Commerce.Plugin.Carts": "2.1.3",
+          "Sitecore.Commerce.Plugin.Search": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Promotions.dll": {}
@@ -1707,10 +1681,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Promotions.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Returns/2.2.4": {
+      "Sitecore.Commerce.Plugin.Returns/2.1.3": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.GiftCards": "2.2.7"
+          "Sitecore.Commerce.Plugin.GiftCards": "2.1.3"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Returns.dll": {}
@@ -1719,11 +1693,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Returns.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Rules/2.2.29": {
+      "Sitecore.Commerce.Plugin.Rules/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Core": "2.2.29",
-          "Sitecore.Framework.Rules": "3.0.1"
+          "Sitecore.Commerce.Core": "2.1.6",
+          "Sitecore.Framework.Rules": "3.0.0"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Rules.dll": {}
@@ -1732,11 +1706,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Rules.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Search/2.2.9": {
+      "Sitecore.Commerce.Plugin.Search/2.1.5": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.ManagedLists": "2.2.29",
-          "Sitecore.Commerce.Plugin.Views": "2.2.29"
+          "Sitecore.Commerce.Plugin.ManagedLists": "2.1.6",
+          "Sitecore.Commerce.Plugin.Views": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Search.dll": {}
@@ -1745,11 +1719,11 @@
           "lib/net462/Sitecore.Commerce.Plugin.Search.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Shops/2.2.29": {
+      "Sitecore.Commerce.Plugin.Shops/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.ManagedLists": "2.2.29",
-          "Sitecore.Commerce.Plugin.Rules": "2.2.29"
+          "Sitecore.Commerce.Plugin.ManagedLists": "2.1.6",
+          "Sitecore.Commerce.Plugin.Rules": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Shops.dll": {}
@@ -1758,10 +1732,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Shops.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Tax/2.2.22": {
+      "Sitecore.Commerce.Plugin.Tax/2.1.5": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Plugin.Fulfillment": "2.2.22"
+          "Sitecore.Commerce.Plugin.Fulfillment": "2.1.5"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Tax.dll": {}
@@ -1770,10 +1744,10 @@
           "lib/net462/Sitecore.Commerce.Plugin.Tax.dll": {}
         }
       },
-      "Sitecore.Commerce.Plugin.Views/2.2.29": {
+      "Sitecore.Commerce.Plugin.Views/2.1.6": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Commerce.Core": "2.2.29"
+          "Sitecore.Commerce.Core": "2.1.6"
         },
         "compile": {
           "lib/net462/Sitecore.Commerce.Plugin.Views.dll": {}
@@ -1782,13 +1756,13 @@
           "lib/net462/Sitecore.Commerce.Plugin.Views.dll": {}
         }
       },
-      "Sitecore.Framework.Caching/3.0.2": {
+      "Sitecore.Framework.Caching/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "Sitecore.Framework.Caching.Abstractions": "3.0.2",
-          "Sitecore.Framework.Common.MatchingOptions": "3.0.1",
-          "Sitecore.Framework.Common.WildcardMatch": "3.0.1",
+          "Sitecore.Framework.Caching.Abstractions": "3.0.0",
+          "Sitecore.Framework.Common.MatchingOptions": "3.0.0",
+          "Sitecore.Framework.Common.WildcardMatch": "3.0.0",
           "Sitecore.Framework.Configuration.Abstractions": "5.0.0"
         },
         "compile": {
@@ -1798,7 +1772,7 @@
           "lib/netstandard2.0/Sitecore.Framework.Caching.dll": {}
         }
       },
-      "Sitecore.Framework.Caching.Abstractions/3.0.2": {
+      "Sitecore.Framework.Caching.Abstractions/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
@@ -1811,14 +1785,14 @@
           "lib/netstandard2.0/Sitecore.Framework.Caching.Abstractions.dll": {}
         }
       },
-      "Sitecore.Framework.Caching.Diagnostics/3.0.2": {
+      "Sitecore.Framework.Caching.Diagnostics/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "Sitecore.Framework.Caching.Abstractions": "3.0.2",
+          "Sitecore.Framework.Caching.Abstractions": "3.0.0",
           "Sitecore.Framework.Configuration": "5.0.0",
-          "Sitecore.Framework.Diagnostics": "3.0.0"
+          "Sitecore.Framework.Diagnostics": "3.0.0-netstandard20-0001"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Caching.Diagnostics.dll": {}
@@ -1827,11 +1801,11 @@
           "lib/netstandard2.0/Sitecore.Framework.Caching.Diagnostics.dll": {}
         }
       },
-      "Sitecore.Framework.Caching.Memory/3.0.2": {
+      "Sitecore.Framework.Caching.Memory/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
-          "Sitecore.Framework.Caching": "3.0.2",
+          "Sitecore.Framework.Caching": "3.0.0",
           "Sitecore.Framework.Conditions": "3.0.0"
         },
         "compile": {
@@ -1841,10 +1815,11 @@
           "lib/netstandard2.0/Sitecore.Framework.Caching.Memory.dll": {}
         }
       },
-      "Sitecore.Framework.Common/3.0.1": {
+      "Sitecore.Framework.Common/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Framework.Common.Abstractions": "3.0.1"
+          "Sitecore.Framework.Common.Abstractions": "3.0.0",
+          "Sitecore.Framework.Conditions": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Common.dll": {}
@@ -1853,7 +1828,7 @@
           "lib/netstandard2.0/Sitecore.Framework.Common.dll": {}
         }
       },
-      "Sitecore.Framework.Common.Abstractions/3.0.1": {
+      "Sitecore.Framework.Common.Abstractions/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
@@ -1879,7 +1854,7 @@
           "lib/netstandard2.0/Sitecore.Framework.Common.Extensions.dll": {}
         }
       },
-      "Sitecore.Framework.Common.MatchingOptions/3.0.1": {
+      "Sitecore.Framework.Common.MatchingOptions/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
@@ -1892,10 +1867,10 @@
           "lib/netstandard2.0/Sitecore.Framework.Common.MatchingOptions.dll": {}
         }
       },
-      "Sitecore.Framework.Common.WildcardMatch/3.0.1": {
+      "Sitecore.Framework.Common.WildcardMatch/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Framework.Common": "3.0.1"
+          "Sitecore.Framework.Common": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Common.WildcardMatch.dll": {}
@@ -1954,14 +1929,14 @@
           "lib/netstandard2.0/Sitecore.Framework.Configuration.Common.dll": {}
         }
       },
-      "Sitecore.Framework.Diagnostics/3.0.0": {
+      "Sitecore.Framework.Diagnostics/3.0.0-netstandard20-0001": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Extensions": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Newtonsoft.Json": "9.0.1",
           "Sitecore.Framework.Conditions": "3.0.0",
-          "Sitecore.Framework.Diagnostics.Abstractions": "3.0.0"
+          "Sitecore.Framework.Diagnostics.Abstractions": "3.0.0-netstandard20-0001"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Diagnostics.dll": {}
@@ -1970,7 +1945,7 @@
           "lib/netstandard2.0/Sitecore.Framework.Diagnostics.dll": {}
         }
       },
-      "Sitecore.Framework.Diagnostics.Abstractions/3.0.0": {
+      "Sitecore.Framework.Diagnostics.Abstractions/3.0.0-netstandard20-0001": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0"
@@ -2058,15 +2033,15 @@
           "lib/netstandard2.0/Sitecore.Framework.Pipelines.Common.dll": {}
         }
       },
-      "Sitecore.Framework.Rules/3.0.1": {
+      "Sitecore.Framework.Rules/3.0.0": {
         "type": "package",
         "dependencies": {
           "Sitecore.Framework.Configuration.Abstractions": "5.0.0",
-          "Sitecore.Framework.Rules.Abstractions": "3.0.1",
-          "Sitecore.Framework.Rules.Api": "3.0.1",
-          "Sitecore.Framework.Rules.Core": "3.0.1",
-          "Sitecore.Framework.Rules.Registry": "3.0.1",
-          "Sitecore.Framework.Rules.Serialization": "3.0.1"
+          "Sitecore.Framework.Rules.Abstractions": "3.0.0",
+          "Sitecore.Framework.Rules.Api": "3.0.0",
+          "Sitecore.Framework.Rules.Core": "3.0.0",
+          "Sitecore.Framework.Rules.Registry": "3.0.0",
+          "Sitecore.Framework.Rules.Serialization": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.dll": {}
@@ -2075,10 +2050,10 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Abstractions/3.0.1": {
+      "Sitecore.Framework.Rules.Abstractions/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Framework.Conditions": "3.0.1"
+          "Sitecore.Framework.Conditions": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Abstractions.dll": {}
@@ -2087,12 +2062,12 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.Abstractions.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Api/3.0.1": {
+      "Sitecore.Framework.Rules.Api/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
-          "Sitecore.Framework.Rules.Core": "3.0.1",
-          "Sitecore.Framework.Rules.Model": "3.0.1"
+          "Sitecore.Framework.Rules.Core": "3.0.0",
+          "Sitecore.Framework.Rules.Model": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Api.dll": {}
@@ -2101,11 +2076,11 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.Api.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Core/3.0.1": {
+      "Sitecore.Framework.Rules.Core/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "Sitecore.Framework.Rules.Abstractions": "3.0.1"
+          "Sitecore.Framework.Rules.Abstractions": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Core.dll": {}
@@ -2114,10 +2089,10 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.Core.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Model/3.0.1": {
+      "Sitecore.Framework.Rules.Model/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Framework.Rules.Abstractions": "3.0.1"
+          "Sitecore.Framework.Rules.Abstractions": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Model.dll": {}
@@ -2126,13 +2101,13 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.Model.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Registry/3.0.1": {
+      "Sitecore.Framework.Rules.Registry/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Options": "2.0.0",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
-          "Sitecore.Framework.Common.WildcardMatch": "3.0.1",
-          "Sitecore.Framework.Conditions": "3.0.1"
+          "Sitecore.Framework.Common.WildcardMatch": "3.0.0",
+          "Sitecore.Framework.Conditions": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Registry.dll": {}
@@ -2141,11 +2116,11 @@
           "lib/netstandard2.0/Sitecore.Framework.Rules.Registry.dll": {}
         }
       },
-      "Sitecore.Framework.Rules.Serialization/3.0.1": {
+      "Sitecore.Framework.Rules.Serialization/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Sitecore.Framework.Rules.Model": "3.0.1",
-          "Sitecore.Framework.Rules.Registry": "3.0.1"
+          "Sitecore.Framework.Rules.Model": "3.0.0",
+          "Sitecore.Framework.Rules.Registry": "3.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Sitecore.Framework.Rules.Serialization.dll": {}
@@ -2196,7 +2171,7 @@
           "lib/netstandard2.0/Sitecore.Framework.Runtime.Common.dll": {}
         }
       },
-      "Sitecore.Kernel.NoReferences/9.0.180604": {
+      "Sitecore.Kernel.NoReferences/9.0.171219": {
         "type": "package",
         "compile": {
           "lib/NET462/Sitecore.Kernel.dll": {}
@@ -2205,7 +2180,7 @@
           "lib/NET462/Sitecore.Kernel.dll": {}
         }
       },
-      "Sitecore.Services.Client.NoReferences/9.0.180604": {
+      "Sitecore.Services.Client.NoReferences/9.0.171219": {
         "type": "package",
         "compile": {
           "lib/NET462/Sitecore.Services.Client.dll": {}
@@ -2214,7 +2189,7 @@
           "lib/NET462/Sitecore.Services.Client.dll": {}
         }
       },
-      "Sitecore.Services.Core.NoReferences/9.0.180604": {
+      "Sitecore.Services.Core.NoReferences/9.0.171219": {
         "type": "package",
         "compile": {
           "lib/NET462/Sitecore.Services.Core.dll": {}
@@ -3081,10 +3056,11 @@
       ]
     },
     "Microsoft.ApplicationInsights/2.5.0": {
-      "sha512": "VZ2ph/D4ggrx+tkhRZLIn9Za9kZGIS/RT6Q4PRdY3gnB5ny4ZGB6CDWijly1Jwx59apf7uU2SGhVAArW0CNKHg==",
+      "sha512": "S9lHyC++vocOAMdGpOP5nwKUj3f2ZkT2c9gta22jJkLZEBtNlNUzZnjUT8OV0yFZXIqyyFuVvhM4hxDT4cpAaQ==",
       "type": "package",
       "path": "microsoft.applicationinsights/2.5.0",
       "files": [
+        ".signature.p7s",
         "lib/net45/Microsoft.ApplicationInsights.dll",
         "lib/net46/Microsoft.ApplicationInsights.dll",
         "lib/netstandard1.3/Microsoft.ApplicationInsights.dll",
@@ -3093,10 +3069,11 @@
       ]
     },
     "Microsoft.ApplicationInsights.Agent.Intercept/2.4.0": {
-      "sha512": "WuK9x24Yt3a3wUVsgFTp0Ef3q2ne0dPSflLRysRnpao70R1+oUil6wW/6tK2PeiwL2giiH+Enli1S+yXmSStqQ==",
+      "sha512": "Vj+YP4xrMPp9RUpThgsdib+bQfsXViS9F5AwprTF62KcJPT9vI649YdDYxt/T3pIS902SXFg+sgNikZ0luDFqw==",
       "type": "package",
       "path": "microsoft.applicationinsights.agent.intercept/2.4.0",
       "files": [
+        ".signature.p7s",
         "lib/net40/Microsoft.AI.Agent.Intercept.dll",
         "lib/net45/Microsoft.AI.Agent.Intercept.dll",
         "microsoft.applicationinsights.agent.intercept.2.4.0.nupkg.sha512",
@@ -3104,10 +3081,11 @@
       ]
     },
     "Microsoft.ApplicationInsights.AspNetCore/2.2.0": {
-      "sha512": "xRWTn5U7gBq2UrPjGKBS5DT0eDGo6M2oKuKme7xyiPRRG8plcnL8bf6NBgZtawaWHwqw44JA2d7o3vVIjklSZw==",
+      "sha512": "YGnblqKhzrYYVdtJTfT4vLK0/5VsgKOwu/0hSZbS+URlaKAQLMVCztNYzLIgLPmqoYZNmgNUP6vX3H6oWOMsqA==",
       "type": "package",
       "path": "microsoft.applicationinsights.aspnetcore/2.2.0",
       "files": [
+        ".signature.p7s",
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll",
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.xml",
         "lib/net46/Microsoft.ApplicationInsights.AspNetCore.dll",
@@ -3119,10 +3097,11 @@
       ]
     },
     "Microsoft.ApplicationInsights.DependencyCollector/2.5.0": {
-      "sha512": "BE3aDAKq+BSwcc0IEmXzvQbi7DeJ9QaUg/IXwGJw50sV/rGCws3CW7dz/j61KljfW06eQXlwIc3a/jObQpdbSg==",
+      "sha512": "hiygtHj6eyHx0Op6ntVyeeubvCj/q86ylSWT8lSDtOZodnuWgnDvIerqfSBr0kojxVEuMyHPdy2qi6JHNEVqQQ==",
       "type": "package",
       "path": "microsoft.applicationinsights.dependencycollector/2.5.0",
       "files": [
+        ".signature.p7s",
         "content/ApplicationInsights.config.install.xdt",
         "content/ApplicationInsights.config.transform",
         "content/ApplicationInsights.config.uninstall.xdt",
@@ -3135,10 +3114,11 @@
       ]
     },
     "Microsoft.ApplicationInsights.PerfCounterCollector/2.5.0": {
-      "sha512": "vWEOfLx0y1gnhCY/L4Hk/ff7WoKnzPN0ffpovISnqDgT2kx9veIhWrJ/qwaMGzvDIfIgY1x4AZjE0N6MfWrwRQ==",
+      "sha512": "5BJTHkozFudgOs4LsNZ94GXk5WtUH8WkxyL9IvKKmxtLh4JbVEA/X5P+caZ9TmMJZ7xiuXCY0sq3RQj/Is9onQ==",
       "type": "package",
       "path": "microsoft.applicationinsights.perfcountercollector/2.5.0",
       "files": [
+        ".signature.p7s",
         "content/ApplicationInsights.config.install.xdt",
         "content/ApplicationInsights.config.transform",
         "content/ApplicationInsights.config.uninstall.xdt",
@@ -3150,10 +3130,11 @@
       ]
     },
     "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.5.0": {
-      "sha512": "TqH6nsRlZ3O3grxEq8rn1W/rcZ5lSAGyFrIgdL5jpAocuVsp0sZl7tpQ6x4hMrnc9YZ0B41acPk1OiEJxmltoQ==",
+      "sha512": "D9Nb/yvpPCU68gINeWcGGHILX/f3PaihWN53jJ5ZYmvzrmCRI//YdcAdPX8zNSb6iIUN9+8baIk31t9qAvZEGw==",
       "type": "package",
       "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.5.0",
       "files": [
+        ".signature.p7s",
         "content/ApplicationInsights.config.install.xdt",
         "content/ApplicationInsights.config.transform",
         "content/ApplicationInsights.config.uninstall.xdt",
@@ -3164,10 +3145,11 @@
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.2": {
-      "sha512": "YVq+s0WeXrPxJk57CoElbtMYf95j76uJcW6nue3Cs4eIer9sgUp4rasSo0gALX3ls1Zf2jMceOLik9X/sJyrwA==",
+      "sha512": "afAva1SZ/POQMlxHji22/gcz/u1qffDUbRy0AtTo3mj7kWUYF+aD094ywykszV6ujuLhRpFP+YRwRDh1VwZUCw==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.client/5.2.2",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Net.Http.Formatting.dll",
         "lib/net45/System.Net.Http.Formatting.xml",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
@@ -3177,10 +3159,11 @@
       ]
     },
     "Microsoft.AspNet.WebApi.Core/5.2.2": {
-      "sha512": "P5boFqqGDq1XF7PVz1U4ju85wQLT0Pb5BbuiWy72cOmWXJKCCNqL+av6omi30knp62hpmfw+3rSCm+Nmt5zRgQ==",
+      "sha512": "ShyIefoaLpcGAJrgkDhukZgX3fr6jOm+Jz3ertOvnxx3vAn84H0Dj0yXEJMuoh+h7J50vz7Y2nje9tQ9S6f47A==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.core/5.2.2",
       "files": [
+        ".signature.p7s",
         "Content/web.config.transform",
         "lib/net45/System.Web.Http.dll",
         "lib/net45/System.Web.Http.xml",
@@ -3189,10 +3172,11 @@
       ]
     },
     "Microsoft.AspNet.WebApi.OData/5.7.0": {
-      "sha512": "odo0eVD9eKwwY4Kh1EeAmZwTgsaSYowzD8o9ho51Q6IriRY2fd5LyP3KFL8Cvsfx10bgoxyp68BlGU8bORVn+A==",
+      "sha512": "6ce4fW5A9d2SQ+UTRW38MdOJlhgWuwTqSKnZ7E63hQ4dWF7f5rFBdEt+APOQONmnH5q/07rOgvCogKPbVpiKQw==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.odata/5.7.0",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Web.Http.OData.dll",
         "lib/net45/System.Web.Http.OData.xml",
         "microsoft.aspnet.webapi.odata.5.7.0.nupkg.sha512",
@@ -3565,10 +3549,11 @@
       ]
     },
     "Microsoft.AspNetCore.Mvc.WebApiCompatShim/2.0.0": {
-      "sha512": "6kPpYC+KPtTHqSVSJOv1U7ywFadgt1LgHngu/mlWrrrmZJAOISyY9u8T+VnsmTOPMI1zs5s1qduAOF2KeaRXcQ==",
+      "sha512": "s3jvrCbiSgJmuuAIOcabgg7NaTNfHv5SBX8102yFflTX1hGpiNfw1h5nJePqsaGGgpJ2t85jBz6dbHu4pJ7/kQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.mvc.webapicompatshim/2.0.0",
       "files": [
+        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.WebApiCompatShim.xml",
         "microsoft.aspnetcore.mvc.webapicompatshim.2.0.0.nupkg.sha512",
@@ -3780,10 +3765,11 @@
       ]
     },
     "Microsoft.Data.Edm/5.6.0": {
-      "sha512": "85HVRPZznEBFLnkbNqBeZUAD7q5h+KdWDO0Beqs9fH/0DWtFX8p02jKIftY3vii7uUoWOdu4K6Kd/p7Xtz3TsA==",
+      "sha512": "d/sdCv2dy3qACw8ogzdSAmxq30Tjl9CRC9W0Fn63OqmTNNtonNHBIOwaYnXGF6iRvzSR/7T+U7xmzIWONQ1IqA==",
       "type": "package",
       "path": "microsoft.data.edm/5.6.0",
       "files": [
+        ".signature.p7s",
         "lib/net40/Microsoft.Data.Edm.dll",
         "lib/net40/Microsoft.Data.Edm.xml",
         "lib/net40/de/Microsoft.Data.Edm.resources.dll",
@@ -3822,10 +3808,11 @@
       ]
     },
     "Microsoft.Data.OData/5.6.0": {
-      "sha512": "Lt+w1eHXe3+HOl0S4XrfO8AW2ALvKFBZtRfb9ZcmTahmE02HIlbaa3cy/jBTwNoFihfQ5vaBjNl4xspSmVcPRw==",
+      "sha512": "25JIHARW1IWTF8ESeH8fCiBamwkpJQFvJtK464dbHk54ftHVcJIskJJZ9uCKrHYOGdl8mMGX52maqsAso2sVNw==",
       "type": "package",
       "path": "microsoft.data.odata/5.6.0",
       "files": [
+        ".signature.p7s",
         "lib/net40/Microsoft.Data.OData.dll",
         "lib/net40/Microsoft.Data.OData.xml",
         "lib/net40/de/Microsoft.Data.OData.resources.dll",
@@ -3899,10 +3886,11 @@
       ]
     },
     "Microsoft.Extensions.CommandLineUtils/1.1.0": {
-      "sha512": "ZBmdRx6aj7RsJmT8KWZnr0dP/O5C/aChLQ1fD4TC4QBDcnh7/yjucIsZc1o3bLtutkqIqJ4ODPaVEhkEaPJZDQ==",
+      "sha512": "QRX3F/N+GfcEMeQbsuBQhAX+wZo2/O8tvWkmEuJG9dbEul4iVZHuZLe488CLfkLFPY/wVV97gDNHw/7LIG8QSg==",
       "type": "package",
       "path": "microsoft.extensions.commandlineutils/1.1.0",
       "files": [
+        ".signature.p7s",
         "lib/net451/Microsoft.Extensions.CommandLineUtils.dll",
         "lib/net451/Microsoft.Extensions.CommandLineUtils.xml",
         "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll",
@@ -4003,10 +3991,11 @@
       ]
     },
     "Microsoft.Extensions.DiagnosticAdapter/1.0.2": {
-      "sha512": "P+vpk4HwO0aJfSmcZaUwbg94BVkd/Ie8myvAxF6SMuuYWy4ZgdXofyupOcrYqV+xknxTH/Kt3W2zdGCxEUQozw==",
+      "sha512": "EYHJkQi49WtXcVv0ISHMaE5metzIVTvqZxLv56/HaXWqU2XW9T8Vv8HCED9fCY2/79yMKIPZVqNFUmhagX3LvQ==",
       "type": "package",
       "path": "microsoft.extensions.diagnosticadapter/1.0.2",
       "files": [
+        ".signature.p7s",
         "lib/netstandard1.1/Microsoft.Extensions.DiagnosticAdapter.dll",
         "lib/netstandard1.1/Microsoft.Extensions.DiagnosticAdapter.xml",
         "microsoft.extensions.diagnosticadapter.1.0.2.nupkg.sha512",
@@ -4194,10 +4183,11 @@
       ]
     },
     "Microsoft.OData.Core/6.15.0": {
-      "sha512": "TlRpYl129Q5IIgZmVByLkykocsC7t49XiM6yXzuzq7szy1ZFVLjs0BQv5qTtbmlyTWlyrO7sOg34ohXFPe2nPQ==",
+      "sha512": "sG3nlb0mNcnvhrcGiYBs+aHNsAtP6HnvSnKIdI9JNm6vrVlsMR3WTDJEjbhxucGaWfObGwjFLVye/wEfRUso5g==",
       "type": "package",
       "path": "microsoft.odata.core/6.15.0",
       "files": [
+        ".signature.p7s",
         "lib/dnx451/Microsoft.OData.Core.dll",
         "lib/dnx451/Microsoft.OData.Core.xml",
         "lib/dnx451/de/Microsoft.OData.Core.resources.dll",
@@ -4247,10 +4237,11 @@
       ]
     },
     "Microsoft.OData.Edm/6.15.0": {
-      "sha512": "2BU7q29nOspEz9OxIrE1JooBypma1VhQw767gPi/PFy2lrJApn06NoG3uuSw4kraPorFfsxZJDtmbcxpVGUWNg==",
+      "sha512": "w0yNX606hHN2YMWwtuzupbrRC5h1SA/ySQ2wT1zZ+5CxsFiGUvMYAzFQDDgtKY1gdXUWc+DDi52f2pZIZgV8bw==",
       "type": "package",
       "path": "microsoft.odata.edm/6.15.0",
       "files": [
+        ".signature.p7s",
         "lib/dnx451/Microsoft.OData.Edm.dll",
         "lib/dnx451/Microsoft.OData.Edm.xml",
         "lib/dnx451/de/Microsoft.OData.Edm.resources.dll",
@@ -4300,10 +4291,11 @@
       ]
     },
     "Microsoft.Spatial/6.15.0": {
-      "sha512": "nEByaxKRGvT38Dd0XrjsKabZL6nE2n/dT5xLykahn3gkqWsoZTPB9u91+hwMmW3o7kgGISLoJVIVR7F0rDkjqg==",
+      "sha512": "vCb2vCPXNYtCChW6UHR6vqIcBkQbS3djyMtBjSdDNBsqKO8v5c2nTV3fCfu2EkX1KCulCCH0KGhLE3R7SSmcqg==",
       "type": "package",
       "path": "microsoft.spatial/6.15.0",
       "files": [
+        ".signature.p7s",
         "lib/dnx451/Microsoft.Spatial.dll",
         "lib/dnx451/Microsoft.Spatial.xml",
         "lib/dnx451/de/Microsoft.Spatial.resources.dll",
@@ -4556,10 +4548,11 @@
       ]
     },
     "Serilog/2.5.0": {
-      "sha512": "JwwkgNYNFKT4kQZ3qBV3VqPgchUg1A6FnlFa9hgyanylwBhJ7eTFl3pgLVxijFEb+oHLImRcMaTsMzBt2AG0aQ==",
+      "sha512": "1uxuc49NByFrDrLszFOWqpUCL7pA9nc1SAgKPB3J7aNq6ChIvQmb64JIuY2hvK/K7YlWK/FGb3FYdxsFGWA+Mw==",
       "type": "package",
       "path": "serilog/2.5.0",
       "files": [
+        ".signature.p7s",
         "lib/net45/Serilog.dll",
         "lib/net45/Serilog.xml",
         "lib/net46/Serilog.dll",
@@ -4572,344 +4565,322 @@
         "serilog.nuspec"
       ]
     },
-    "Sitecore.Commerce.Core/2.2.29": {
-      "sha512": "HuIFGiXO+9R/9IAcpt8wnmES3PY46mIG+rBbY4cYQxG6w+MN+b1Gogzam43n7OTtKCi7XhWx8aa9n4YA+ocLdw==",
+    "Sitecore.Commerce.Core/2.1.6": {
+      "sha512": "cO0Cy7PPcSLa/OSjPksgn5t1XnyfcjaAJlWaJngXm6iJZM657jJHJOAW2Cz8ql0WyWVsQwPaFweyqvYg3xwttA==",
       "type": "package",
-      "path": "sitecore.commerce.core/2.2.29",
+      "path": "sitecore.commerce.core/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Core.dll",
         "lib/net462/Sitecore.Commerce.Core.xml",
-        "sitecore.commerce.core.2.2.29.nupkg.sha512",
+        "sitecore.commerce.core.2.1.6.nupkg.sha512",
         "sitecore.commerce.core.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Availability/2.2.8": {
-      "sha512": "zP/YfFUM9q6Y/JJ4ZArrhIWXC1N2CMYK3b61cbq5/xl9xe8h6iVn+8AuBMaH+wHBLcDtBK2s1QzzFIhshdH68w==",
+    "Sitecore.Commerce.Plugin.Availability/2.1.3": {
+      "sha512": "E6vUcCC47KEJ6IwA5OtYVVx2ib43XEiCz6sJXkYkxqepVCZHLH59gTEnBdhIbuyRDiIFrngxAddwnvEubb188Q==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.availability/2.2.8",
+      "path": "sitecore.commerce.plugin.availability/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Availability.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Availability.xml",
-        "sitecore.commerce.plugin.availability.2.2.8.nupkg.sha512",
+        "sitecore.commerce.plugin.availability.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.availability.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.BusinessUsers/2.2.29": {
-      "sha512": "Mj/zDIr+kVf/mqfi+tNmdCtT7xL2UlSztZO7q83UV1053sL9Rr3K6CKrJM8krOwaOsDWmEhjefNuNRF5lsoxMg==",
+    "Sitecore.Commerce.Plugin.BusinessUsers/2.1.6": {
+      "sha512": "Cq7pIWlwS6lIauwlXKP5aq2DuN6Rx+PSgLeLIkWv2VKzs1TGQNVX6ceRhCf17PSggz6RkCCoFrNuW3eKJmAA6Q==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.businessusers/2.2.29",
+      "path": "sitecore.commerce.plugin.businessusers/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.BusinessUsers.dll",
         "lib/net462/Sitecore.Commerce.Plugin.BusinessUsers.xml",
-        "sitecore.commerce.plugin.businessusers.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.businessusers.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.businessusers.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Carts/2.2.11": {
-      "sha512": "W75mMo/z1p43K0+Fe8/BvfwMcvOWdFq+AiZEw1tkuZRRLeVlY0xNiG547RYPGQWCKHOAQ7NJYbbiFmtD3XGQug==",
+    "Sitecore.Commerce.Plugin.Carts/2.1.3": {
+      "sha512": "AjP835rKrxwBNo+E+W1x2Hbp/2+rMCcbt0bGVO8MomTInlV2OTcbFjgXVLEQ3+WIdIwuPCCBymnZ4b0rUGFKcg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.carts/2.2.11",
+      "path": "sitecore.commerce.plugin.carts/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Carts.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Carts.xml",
-        "sitecore.commerce.plugin.carts.2.2.11.nupkg.sha512",
+        "sitecore.commerce.plugin.carts.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.carts.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Catalog/2.2.46": {
-      "sha512": "Nr2g/58DVUzaXYeYQq1M2i4JJ/zMr59L4MoaSazECXtEJ8NS4pe9WsXk+o8F/pV3LCIOyvE1ENGmw9ndbL1ZeA==",
+    "Sitecore.Commerce.Plugin.Catalog/2.1.10": {
+      "sha512": "rEOZG7mUECsIwc9pDrlmRgZHMQcxe6n9JBPpcVNlxQ1N+CPGVmyJlwtarJcXjvSoHnVugRyUj2TY3spYLuTmeQ==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.catalog/2.2.46",
+      "path": "sitecore.commerce.plugin.catalog/2.1.10",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Catalog.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Catalog.xml",
-        "sitecore.commerce.plugin.catalog.2.2.46.nupkg.sha512",
+        "sitecore.commerce.plugin.catalog.2.1.10.nupkg.sha512",
         "sitecore.commerce.plugin.catalog.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Composer/2.2.29": {
-      "sha512": "afdKzuEGotZsLR8NgNQ5qplb8P8SSj81VH4dndisMdSrF3XUAlAA4sEE07TErlsF3Rp7vCwtKFTdSebXAVQvZg==",
+    "Sitecore.Commerce.Plugin.Customers/2.1.4": {
+      "sha512": "i5shsMbA/+oZBJvUbRPUJAD1MIIdp7T6hbX1sphohu5E764EqPHUF9+Tr+1D/1sMt2k15d/MGxpfkZrC1gQsKQ==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.composer/2.2.29",
-      "files": [
-        "lib/net462/Sitecore.Commerce.Plugin.Composer.dll",
-        "lib/net462/Sitecore.Commerce.Plugin.Composer.xml",
-        "sitecore.commerce.plugin.composer.2.2.29.nupkg.sha512",
-        "sitecore.commerce.plugin.composer.nuspec"
-      ]
-    },
-    "Sitecore.Commerce.Plugin.Customers/2.2.10": {
-      "sha512": "paSysMYxUbc7FjM28ULiQUoFkyKoXZTmhR4rIrNRGe3wy9IG4tXdsbtN1dEGFSEWLr8Qg6G5LD2KLwHt3106fg==",
-      "type": "package",
-      "path": "sitecore.commerce.plugin.customers/2.2.10",
+      "path": "sitecore.commerce.plugin.customers/2.1.4",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Customers.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Customers.xml",
-        "sitecore.commerce.plugin.customers.2.2.10.nupkg.sha512",
+        "sitecore.commerce.plugin.customers.2.1.4.nupkg.sha512",
         "sitecore.commerce.plugin.customers.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.DigitalItems/2.2.7": {
-      "sha512": "WeFf06f/4p1uEvNN14fVWn6nQY36VEuLwkKKSgjAdPqgRPef8i3ROp9ICD52PN3X7m//719RMRQKdhkUFtiplA==",
+    "Sitecore.Commerce.Plugin.DigitalItems/2.1.3": {
+      "sha512": "5eLHF9uZfNColSe7cJ2cabArarPE8CbST8GbbeGm78PssWXa0Xk9TVP66QTbkjGYwfIomCiysl8CB3iFr1GUUA==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.digitalitems/2.2.7",
+      "path": "sitecore.commerce.plugin.digitalitems/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.DigitalItems.dll",
         "lib/net462/Sitecore.Commerce.Plugin.DigitalItems.xml",
-        "sitecore.commerce.plugin.digitalitems.2.2.7.nupkg.sha512",
+        "sitecore.commerce.plugin.digitalitems.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.digitalitems.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Entitlements/2.2.7": {
-      "sha512": "NUB2g1EzSy6qN5tTvjl47hT5xG2FszLU7a/uDR7YWmAGdVV96w3HFOfmluFfEpNT1qNfwNDyqRU0evlGe5YU4w==",
+    "Sitecore.Commerce.Plugin.Entitlements/2.1.3": {
+      "sha512": "z6dTOkpuZCDVzyjD6QYl693PueONdHs40jse+BAKt9D6Ph/iTDTMAQeigb7HrDAEo8Ii8az2zTXJFQY1y3nPAw==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.entitlements/2.2.7",
+      "path": "sitecore.commerce.plugin.entitlements/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Entitlements.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Entitlements.xml",
-        "sitecore.commerce.plugin.entitlements.2.2.7.nupkg.sha512",
+        "sitecore.commerce.plugin.entitlements.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.entitlements.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.EntityVersions/2.2.29": {
-      "sha512": "Nwy3OJfFM4LTCPLXodmTsT2KNjiuYQ5yuzY7wZKjKeyRtsCxYHuEvunI+5POzJBXuT6Wc6lhRF+7zu/Tbai+QA==",
+    "Sitecore.Commerce.Plugin.Fulfillment/2.1.5": {
+      "sha512": "8hStBBIdCoQSIvbs03XRnsXhe8weMnny5963L0qo+tbSk/mEN450C3NjM4AFRHGGTnjw6pPwe6WZZIvYVyrOCQ==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.entityversions/2.2.29",
-      "files": [
-        "lib/net462/Sitecore.Commerce.Plugin.EntityVersions.dll",
-        "lib/net462/Sitecore.Commerce.Plugin.EntityVersions.xml",
-        "sitecore.commerce.plugin.entityversions.2.2.29.nupkg.sha512",
-        "sitecore.commerce.plugin.entityversions.nuspec"
-      ]
-    },
-    "Sitecore.Commerce.Plugin.Fulfillment/2.2.22": {
-      "sha512": "aBusAEUDxPQWU3kbQLOkiVBx2QiTV78hr6K2H1uNkGc0Qdf1jtho+QEx0QM7dK6JcN0/7MdPIy0hPKluYo2bCg==",
-      "type": "package",
-      "path": "sitecore.commerce.plugin.fulfillment/2.2.22",
+      "path": "sitecore.commerce.plugin.fulfillment/2.1.5",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Fulfillment.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Fulfillment.xml",
-        "sitecore.commerce.plugin.fulfillment.2.2.22.nupkg.sha512",
+        "sitecore.commerce.plugin.fulfillment.2.1.5.nupkg.sha512",
         "sitecore.commerce.plugin.fulfillment.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.GiftCards/2.2.7": {
-      "sha512": "dTMlX3/rYPU6qaEFPij/ve7cpU0+Lai+LVN0typ5QAnSse3DrHbxCS67Gh13Al77/Mo0O/fXiYkIZVia6Mmh0g==",
+    "Sitecore.Commerce.Plugin.GiftCards/2.1.3": {
+      "sha512": "33nBC0C3nz4cCKKCyxMz0ds1PfrKI7zeYLGzcQDwYltySZLlq1K4+vqO8sX+wfxIMruElD6MinqI2GewHYMsig==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.giftcards/2.2.7",
+      "path": "sitecore.commerce.plugin.giftcards/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.GiftCards.dll",
         "lib/net462/Sitecore.Commerce.Plugin.GiftCards.xml",
-        "sitecore.commerce.plugin.giftcards.2.2.7.nupkg.sha512",
+        "sitecore.commerce.plugin.giftcards.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.giftcards.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.ManagedLists/2.2.29": {
-      "sha512": "rLOPw10E7vNWcOTpAYHPFZ9JiC/bJyerBg4hLNMsuCz0H+7g3Bre0ZfR1WaYE3cGwn8H9u+QMif/yk7Dgr46UA==",
+    "Sitecore.Commerce.Plugin.ManagedLists/2.1.6": {
+      "sha512": "n/3rGrX3Y9cKO/hriRReVE4DxsHtWY9uPvy68zPrPHCU80foBLKyfHL0OlhQEnp//C8lw2L2P5Ec7XwsS8j3tg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.managedlists/2.2.29",
+      "path": "sitecore.commerce.plugin.managedlists/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.ManagedLists.dll",
         "lib/net462/Sitecore.Commerce.Plugin.ManagedLists.xml",
-        "sitecore.commerce.plugin.managedlists.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.managedlists.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.managedlists.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Management/2.2.9": {
-      "sha512": "bkILPnuHfspJuuHnKOIBXRJwb4u/DOYpS70CWNAg63XlV4qf9WPy9EVbubJv57Ct739eStq2rrxWU60JFvnVog==",
+    "Sitecore.Commerce.Plugin.Management/2.1.4": {
+      "sha512": "TrbXTXDGNfs9QmpDa/F21ASjt6W0AEaf/GkdL2y6zcty7dl1Kq5qiNcnb1NemlqbKCekCOglplV2FhdwDNsVuQ==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.management/2.2.9",
+      "path": "sitecore.commerce.plugin.management/2.1.4",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Management.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Management.xml",
-        "sitecore.commerce.plugin.management.2.2.9.nupkg.sha512",
+        "sitecore.commerce.plugin.management.2.1.4.nupkg.sha512",
         "sitecore.commerce.plugin.management.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Media/2.2.29": {
-      "sha512": "WquAuD31IRbVjFfFwK4B0kzTiuw5Ylomg1HHkYiCW1CnqSOYIQCxJnkitZLu0rh5HF07a9Yolrt1fA9N2tbisQ==",
+    "Sitecore.Commerce.Plugin.Media/2.1.6": {
+      "sha512": "OdDAbhRsP44wkoYNzqp0Ufgqax2KFCtDezOFi4OG4eC2O5TVVwwvwE15tglq/YyIlUOC71wfHgUCs1PVumlOrw==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.media/2.2.29",
+      "path": "sitecore.commerce.plugin.media/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Media.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Media.xml",
-        "sitecore.commerce.plugin.media.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.media.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.media.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Orders/2.2.22": {
-      "sha512": "CZNlmUHO6cs9k4ZbeVj3F5DQtn3NqrZPEPdBp/PpLEHGdPAQZY0L5Aput47TE1evyQVxU+Qh0+fFXABOacVgKQ==",
+    "Sitecore.Commerce.Plugin.Orders/2.1.5": {
+      "sha512": "tdZ7qAL0KJkgPza5m1YAwo9Bt3nXYZUZIojL6cxbISmbEDFQIUy7WeYVtLqha+6k/4mHKggjSbBNaS79ZFKZ4A==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.orders/2.2.22",
+      "path": "sitecore.commerce.plugin.orders/2.1.5",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Orders.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Orders.xml",
-        "sitecore.commerce.plugin.orders.2.2.22.nupkg.sha512",
+        "sitecore.commerce.plugin.orders.2.1.5.nupkg.sha512",
         "sitecore.commerce.plugin.orders.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Payments/2.2.22": {
-      "sha512": "ZEppumU9rZlr9e3eDLRm6VaK7Hl6J/q03i2FkAi7AnqJl7JiOMnFP+MFIDREvws3I/5T7sBuZa6+bNGi4A35JA==",
+    "Sitecore.Commerce.Plugin.Payments/2.1.5": {
+      "sha512": "uVnoatc0Xdp74RIjFV79RzhX72wotPa4oe2CbBvtctlsxV0gsaE0HiYrHghd8Hd9EaozX1HG9H/spy5zERg71w==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.payments/2.2.22",
+      "path": "sitecore.commerce.plugin.payments/2.1.5",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Payments.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Payments.xml",
-        "sitecore.commerce.plugin.payments.2.2.22.nupkg.sha512",
+        "sitecore.commerce.plugin.payments.2.1.5.nupkg.sha512",
         "sitecore.commerce.plugin.payments.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Pricing/2.2.12": {
-      "sha512": "rmDET0QjVe+XxFTOe7oaapsTave4dNOdYgYW1xRzLL/vYt5T1uH7QvK3ylrmcuA6vKwbEpsCrt6itXwYy87XnA==",
+    "Sitecore.Commerce.Plugin.Pricing/2.1.3": {
+      "sha512": "Y6muw0jFu+ADQP4kdffoGB+FczKOsop73TchSgoXncroy44aB+jAmVHYDWUTMWOk4znK6eG3F/YWCupTFH02hg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.pricing/2.2.12",
+      "path": "sitecore.commerce.plugin.pricing/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Pricing.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Pricing.xml",
-        "sitecore.commerce.plugin.pricing.2.2.12.nupkg.sha512",
+        "sitecore.commerce.plugin.pricing.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.pricing.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Promotions/2.2.3": {
-      "sha512": "2R3ybQztTHcbGskLqLBlEDBp4o7+Y0sX1D4nG7R4wr/tlgC4p1htKB0G45bNNCSgvpmRE/Tg8TzIF9xDIo2RJw==",
+    "Sitecore.Commerce.Plugin.Promotions/2.1.6": {
+      "sha512": "Rqps/AHY/KaerXeG5ZQVmn6UJx/Xih9qZP8eEj8tkFdqzzqcrX8Bmsn7Zv600YkJCEwkCDgRv26MEwW0ZsBwyg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.promotions/2.2.3",
+      "path": "sitecore.commerce.plugin.promotions/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Promotions.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Promotions.xml",
-        "sitecore.commerce.plugin.promotions.2.2.3.nupkg.sha512",
+        "sitecore.commerce.plugin.promotions.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.promotions.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Returns/2.2.4": {
-      "sha512": "pKH+iyfLlDXxu8x/eIvQzlvqPg9vHxOgWYNeSZT+Ng0ZX4HLem9qPcuF18cmccQdi8E9Th2cojY9mIz6/JUVDw==",
+    "Sitecore.Commerce.Plugin.Returns/2.1.3": {
+      "sha512": "XdS30kSiCKIOTJMNIuD5eU/otZpU/w+yeo3iF2GW/sbyWo7kP9XCGgaysbB1DZM8jAoVpdXX6mK/v6H87Oscxw==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.returns/2.2.4",
+      "path": "sitecore.commerce.plugin.returns/2.1.3",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Returns.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Returns.xml",
-        "sitecore.commerce.plugin.returns.2.2.4.nupkg.sha512",
+        "sitecore.commerce.plugin.returns.2.1.3.nupkg.sha512",
         "sitecore.commerce.plugin.returns.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Rules/2.2.29": {
-      "sha512": "YqdStpXE/KEcnQewvbvoNnWBQjc3+pKo2BDtQc6DV/RKS7Vk51Um1UEneM9CIKXpfJAsVq0Jm3RhsrfGVNXQTg==",
+    "Sitecore.Commerce.Plugin.Rules/2.1.6": {
+      "sha512": "QdsLLfZLl4LlKrDod5SspQ9MUCia0ghjxPoYRStQ2f6xfxlnmo8NEMCWW3HcHaiaWx6Mjvdz0gdvuesG2fpSvg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.rules/2.2.29",
+      "path": "sitecore.commerce.plugin.rules/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Rules.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Rules.xml",
-        "sitecore.commerce.plugin.rules.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.rules.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.rules.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Search/2.2.9": {
-      "sha512": "E9mluEIELzqvE+Q5sga3t5zXn4bIbyc03T0gFTVLMOxaxN14V+rTSDUD1eM9vowSsORr/6jhL2R6a5EZiU9/dw==",
+    "Sitecore.Commerce.Plugin.Search/2.1.5": {
+      "sha512": "4GCKRxiquyvc1nW73Tc1BnFbnKfZjM7XzjYstw+gJiiGqVdj5/mJbSl0BWYFih7DbTy52I2UJ5T0C2DKQN1PlA==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.search/2.2.9",
+      "path": "sitecore.commerce.plugin.search/2.1.5",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Search.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Search.xml",
-        "sitecore.commerce.plugin.search.2.2.9.nupkg.sha512",
+        "sitecore.commerce.plugin.search.2.1.5.nupkg.sha512",
         "sitecore.commerce.plugin.search.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Shops/2.2.29": {
-      "sha512": "8Y4wOYlYLHpm6qKSRx1TTPPSwvcxT77Xc/LNqhiJkgb9XA86pdDUT+gcOMlDVulG+8csqrup4okoD9tLtukIDg==",
+    "Sitecore.Commerce.Plugin.Shops/2.1.6": {
+      "sha512": "Sr4q4U17z99LllkxizAMfKJQw+DOhzTyY9/KJExHxBae4RtA+sbHdY0NJJdbi8Ue0Xzm9uKmaojUmZ0GucmYOg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.shops/2.2.29",
+      "path": "sitecore.commerce.plugin.shops/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Shops.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Shops.xml",
-        "sitecore.commerce.plugin.shops.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.shops.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.shops.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Tax/2.2.22": {
-      "sha512": "+pRhIl7fwOK+M9bfFYCvXSdTaB4ursT9HpFtYXjPTAK6ZyHge/k8Kjrq+qpemvnC1P+Ztt0SyadHEwzQhh7Auw==",
+    "Sitecore.Commerce.Plugin.Tax/2.1.5": {
+      "sha512": "FrdW90+Kb6mqQVPE8tCPbEbwLvFm5rBLARy4P6D3RIdv0JJPFKxxl/U7YLoVqqntxkwn0egdmFJ78V3L4fqTow==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.tax/2.2.22",
+      "path": "sitecore.commerce.plugin.tax/2.1.5",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Tax.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Tax.xml",
-        "sitecore.commerce.plugin.tax.2.2.22.nupkg.sha512",
+        "sitecore.commerce.plugin.tax.2.1.5.nupkg.sha512",
         "sitecore.commerce.plugin.tax.nuspec"
       ]
     },
-    "Sitecore.Commerce.Plugin.Views/2.2.29": {
-      "sha512": "hO07rPXrphFpCp7H/Cz3uVE+tVNFPvNzslMQiCiaHvupQgGcXvq6Vn3iSqJlOM8VJDLCUXE+LFScAtjblMG3Gw==",
+    "Sitecore.Commerce.Plugin.Views/2.1.6": {
+      "sha512": "HOPCaYUW+yBtTK+YwOezKfYeUutdCZ3toR8rIixxndaeInjnIMKcZH0Ryg8qbVROAsCdi+FhLSywxjfbVOPfwg==",
       "type": "package",
-      "path": "sitecore.commerce.plugin.views/2.2.29",
+      "path": "sitecore.commerce.plugin.views/2.1.6",
       "files": [
         "lib/net462/Sitecore.Commerce.Plugin.Views.dll",
         "lib/net462/Sitecore.Commerce.Plugin.Views.xml",
-        "sitecore.commerce.plugin.views.2.2.29.nupkg.sha512",
+        "sitecore.commerce.plugin.views.2.1.6.nupkg.sha512",
         "sitecore.commerce.plugin.views.nuspec"
       ]
     },
-    "Sitecore.Framework.Caching/3.0.2": {
-      "sha512": "12V3KFuNojXHi/flZ7crkb6WW6oKPkOzmbuhDn48fcKHJ/YEAXOF4ofsKYSrfmaqtzFwpA9BJ4KK1Kz/UnqUWA==",
+    "Sitecore.Framework.Caching/3.0.0": {
+      "sha512": "kymwcCge7sgtURa1I5T7mDgBxuliIKK6vb+aZQ3e5iXdqqq03R3X89uCQzytyR/Pz3Fds7+E2md3E5cggGrvQA==",
       "type": "package",
-      "path": "sitecore.framework.caching/3.0.2",
+      "path": "sitecore.framework.caching/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Caching.dll",
         "lib/netstandard2.0/Sitecore.Framework.Caching.xml",
-        "sitecore.framework.caching.3.0.2.nupkg.sha512",
+        "sitecore.framework.caching.3.0.0.nupkg.sha512",
         "sitecore.framework.caching.nuspec"
       ]
     },
-    "Sitecore.Framework.Caching.Abstractions/3.0.2": {
-      "sha512": "wttpw1b0qiECAHQatWfIyORJXOelZzPoDGuIVu5TUJlvmee5fRLHU3FX4vYJ7UMIKxUV8CFBd2TZKn+GILQpvw==",
+    "Sitecore.Framework.Caching.Abstractions/3.0.0": {
+      "sha512": "nmWNAR3RZBBDkwyXqwlkoiVmI1z8dQ2yXGvEqi6234vwOyD6XNSqZvf9y/Ba3jqm8qzOMaSurLcFL7Ee3IBUUw==",
       "type": "package",
-      "path": "sitecore.framework.caching.abstractions/3.0.2",
+      "path": "sitecore.framework.caching.abstractions/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Caching.Abstractions.dll",
         "lib/netstandard2.0/Sitecore.Framework.Caching.Abstractions.xml",
-        "sitecore.framework.caching.abstractions.3.0.2.nupkg.sha512",
+        "sitecore.framework.caching.abstractions.3.0.0.nupkg.sha512",
         "sitecore.framework.caching.abstractions.nuspec"
       ]
     },
-    "Sitecore.Framework.Caching.Diagnostics/3.0.2": {
-      "sha512": "6TEbzsaGrDDw/lP3GGEDx1JgeMHyjVqY/yMxaDLirucsgLZBaEufRntrSPyKMetkOpSjchOml/zgu96c3Xx6rg==",
+    "Sitecore.Framework.Caching.Diagnostics/3.0.0": {
+      "sha512": "Sr+PN75OijKyOZwY7K/MOWLZEWCkdioSPYyAoXJS5xrCcXmzjNywGeo0n30XVG3mq0dNSlHdmNUYl1gixcg58A==",
       "type": "package",
-      "path": "sitecore.framework.caching.diagnostics/3.0.2",
+      "path": "sitecore.framework.caching.diagnostics/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Caching.Diagnostics.dll",
         "lib/netstandard2.0/Sitecore.Framework.Caching.Diagnostics.xml",
-        "sitecore.framework.caching.diagnostics.3.0.2.nupkg.sha512",
+        "sitecore.framework.caching.diagnostics.3.0.0.nupkg.sha512",
         "sitecore.framework.caching.diagnostics.nuspec"
       ]
     },
-    "Sitecore.Framework.Caching.Memory/3.0.2": {
-      "sha512": "SnSCqIY46KBsSXO47mhPFlMmn3XOoAhhGj2WbOKvGFBmbdXoA7DjQuqJ2tdbUnR7kR5OwY+c/loK/bNK6IsSiA==",
+    "Sitecore.Framework.Caching.Memory/3.0.0": {
+      "sha512": "rOASX2AMefVRffd/3kRXpPstNmy6mVELec9nWWAsgAGb2OIHep/5t4q3cjqRagyRn0aoaWAettYHCP282jIdow==",
       "type": "package",
-      "path": "sitecore.framework.caching.memory/3.0.2",
+      "path": "sitecore.framework.caching.memory/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Caching.Memory.dll",
         "lib/netstandard2.0/Sitecore.Framework.Caching.Memory.xml",
-        "sitecore.framework.caching.memory.3.0.2.nupkg.sha512",
+        "sitecore.framework.caching.memory.3.0.0.nupkg.sha512",
         "sitecore.framework.caching.memory.nuspec"
       ]
     },
-    "Sitecore.Framework.Common/3.0.1": {
-      "sha512": "xGAxpKl5eWfyk10Z4QpwOKFTmcZ/uxzUgbVVVZpXbcKTbvKaT7f3UuACsZXoOD/8ozffKZ4h0sVDAma/RkYPlA==",
+    "Sitecore.Framework.Common/3.0.0": {
+      "sha512": "6gLLPqdUuqW1c1TU0BRgCsStNFPbLJVL7JRjcom7rerIp/L1LFGz3lgKGGq66iYOcsR3EXWCJi7CTXBNpKsWxQ==",
       "type": "package",
-      "path": "sitecore.framework.common/3.0.1",
+      "path": "sitecore.framework.common/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Common.dll",
         "lib/netstandard2.0/Sitecore.Framework.Common.xml",
-        "sitecore.framework.common.3.0.1.nupkg.sha512",
+        "sitecore.framework.common.3.0.0.nupkg.sha512",
         "sitecore.framework.common.nuspec"
       ]
     },
-    "Sitecore.Framework.Common.Abstractions/3.0.1": {
-      "sha512": "7sjshFR3+9vW/KgliOQYe0Lgoa6KiU0/77sLgfWsPdpgZMk5ZDyxf67rophtqoSjX9JRRQV965fJV7B7Cjtz8w==",
+    "Sitecore.Framework.Common.Abstractions/3.0.0": {
+      "sha512": "Q+OF4SJP6YFfLQ2pTRL5hsTIPxCVLFPPPHqIfLpLr1BouE6FRZSklc9OgzdclHdX8ruMnTi1UPJOjJzD6CH6QQ==",
       "type": "package",
-      "path": "sitecore.framework.common.abstractions/3.0.1",
+      "path": "sitecore.framework.common.abstractions/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Common.Abstractions.dll",
         "lib/netstandard2.0/Sitecore.Framework.Common.Abstractions.xml",
-        "sitecore.framework.common.abstractions.3.0.1.nupkg.sha512",
+        "sitecore.framework.common.abstractions.3.0.0.nupkg.sha512",
         "sitecore.framework.common.abstractions.nuspec"
       ]
     },
@@ -4924,25 +4895,25 @@
         "sitecore.framework.common.extensions.nuspec"
       ]
     },
-    "Sitecore.Framework.Common.MatchingOptions/3.0.1": {
-      "sha512": "ge+TeM37hpwQI0e1S82c7lUDPMAT6O+0Kb3lub18vQfuwPUW0UZCrsQosYTZnaHCwwvd+p16WOc9rLJrHie9iA==",
+    "Sitecore.Framework.Common.MatchingOptions/3.0.0": {
+      "sha512": "BdLLatYEHpVvfbkK5iIJBQ05c3t5cHqcIPyM1J2T15n7FIl6JRucWQNE4FYYmkvGbGayRaRgwzOiEyeRBcjEKg==",
       "type": "package",
-      "path": "sitecore.framework.common.matchingoptions/3.0.1",
+      "path": "sitecore.framework.common.matchingoptions/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Common.MatchingOptions.dll",
         "lib/netstandard2.0/Sitecore.Framework.Common.MatchingOptions.xml",
-        "sitecore.framework.common.matchingoptions.3.0.1.nupkg.sha512",
+        "sitecore.framework.common.matchingoptions.3.0.0.nupkg.sha512",
         "sitecore.framework.common.matchingoptions.nuspec"
       ]
     },
-    "Sitecore.Framework.Common.WildcardMatch/3.0.1": {
-      "sha512": "Hm9m07AyrUpU1aNZGF6o+83QkPyEj18nFxJfnLqJCoLvn2OcwGj1TRYNe2wEArT/RvCSfesMFZ22dm3ruGzqog==",
+    "Sitecore.Framework.Common.WildcardMatch/3.0.0": {
+      "sha512": "ao+GYcmEVcjfjpCGERDgDosSHBkKLwEo6pox2HOrZh2xHP572l2SCBLOwH82eOGvbnqYcIMsT8mQnrxH53P+zw==",
       "type": "package",
-      "path": "sitecore.framework.common.wildcardmatch/3.0.1",
+      "path": "sitecore.framework.common.wildcardmatch/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Common.WildcardMatch.dll",
         "lib/netstandard2.0/Sitecore.Framework.Common.WildcardMatch.xml",
-        "sitecore.framework.common.wildcardmatch.3.0.1.nupkg.sha512",
+        "sitecore.framework.common.wildcardmatch.3.0.0.nupkg.sha512",
         "sitecore.framework.common.wildcardmatch.nuspec"
       ]
     },
@@ -4990,25 +4961,25 @@
         "sitecore.framework.configuration.common.nuspec"
       ]
     },
-    "Sitecore.Framework.Diagnostics/3.0.0": {
-      "sha512": "RntXWfYiHFnh8yHj9FT1wjGb6NJGBmK0RcgUSrzgvg3UpBevwRiqcX/qrb+GiYd6/SmMhdUEyGvb4pv+TW3dqg==",
+    "Sitecore.Framework.Diagnostics/3.0.0-netstandard20-0001": {
+      "sha512": "jvFacJn7CCZ4DkjeYTCVi0F7cU0XhwSMCS9WOi4HzWf6bDXzJ3PTHI0GMY26HzE9JnjIvExjXmMZj7WfCBkLZw==",
       "type": "package",
-      "path": "sitecore.framework.diagnostics/3.0.0",
+      "path": "sitecore.framework.diagnostics/3.0.0-netstandard20-0001",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Diagnostics.dll",
         "lib/netstandard2.0/Sitecore.Framework.Diagnostics.xml",
-        "sitecore.framework.diagnostics.3.0.0.nupkg.sha512",
+        "sitecore.framework.diagnostics.3.0.0-netstandard20-0001.nupkg.sha512",
         "sitecore.framework.diagnostics.nuspec"
       ]
     },
-    "Sitecore.Framework.Diagnostics.Abstractions/3.0.0": {
-      "sha512": "0gzeIoxjqXV9E2GM4YKKk+hV5JxqpDlVk3IsySeWExQwJsaYJSD8hNIi7DnF22opaGDvIq5c7mTF5at2KmBjpg==",
+    "Sitecore.Framework.Diagnostics.Abstractions/3.0.0-netstandard20-0001": {
+      "sha512": "HuzkGEi/MmmV4d9i+MNA8nCTmHq4bO3psT4ZvJcOEavXbUqzjQEWLBBd0263Bo6rKRe15eEqo4KR0kD44woisQ==",
       "type": "package",
-      "path": "sitecore.framework.diagnostics.abstractions/3.0.0",
+      "path": "sitecore.framework.diagnostics.abstractions/3.0.0-netstandard20-0001",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Diagnostics.Abstractions.dll",
         "lib/netstandard2.0/Sitecore.Framework.Diagnostics.Abstractions.xml",
-        "sitecore.framework.diagnostics.abstractions.3.0.0.nupkg.sha512",
+        "sitecore.framework.diagnostics.abstractions.3.0.0-netstandard20-0001.nupkg.sha512",
         "sitecore.framework.diagnostics.abstractions.nuspec"
       ]
     },
@@ -5078,80 +5049,80 @@
         "sitecore.framework.pipelines.common.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules/3.0.1": {
-      "sha512": "qd8LLEauH/dho4QkIp/bmiQyHeSrgH6eT09OmWB/ImJO42n4nCJV0bZq8ffTxxYbpn0f2fewby4sgERz7QDdfA==",
+    "Sitecore.Framework.Rules/3.0.0": {
+      "sha512": "d1X0G0trZdhubc1yDMx4wTfEty/jkpI8ibOZpbhxu6YGMlIeepcW2Ikq/osPqElEvbX3mldAiIR1eMqvXzVlnA==",
       "type": "package",
-      "path": "sitecore.framework.rules/3.0.1",
+      "path": "sitecore.framework.rules/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.xml",
-        "sitecore.framework.rules.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Abstractions/3.0.1": {
-      "sha512": "aoZeQpgw5qZ++wL729mH+jcM5MU6bwRzaiWTy76RBOeRv8o5SPQzc5tWBhhnBv8cT9pzMx4FnJ8fIWVT1scclQ==",
+    "Sitecore.Framework.Rules.Abstractions/3.0.0": {
+      "sha512": "msr82ewOaaQvg/waXQBy4Q4FD7tRGMaNCuFJxUCmOa3Iin3P0n2w7UFnVOJAs57busYqgQM5ZdX2qPaNfk0vpQ==",
       "type": "package",
-      "path": "sitecore.framework.rules.abstractions/3.0.1",
+      "path": "sitecore.framework.rules.abstractions/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Abstractions.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Abstractions.xml",
-        "sitecore.framework.rules.abstractions.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.abstractions.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.abstractions.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Api/3.0.1": {
-      "sha512": "EzSz71Pgou0rgOAfU5LePIIKMODGEgWh04W+yxJ5Q6pUCNJtokAt4oBpzHgETNnDu3Wzz9bF7jcgNC3h0m4fRA==",
+    "Sitecore.Framework.Rules.Api/3.0.0": {
+      "sha512": "QsTX3NXbxiDyLMes8Q/hOwBnOKDTR8V4me3Er1RSFzArK9uxNJGz0RMdd2F9uUYVbrledWnVhb+AueYy6wtA+w==",
       "type": "package",
-      "path": "sitecore.framework.rules.api/3.0.1",
+      "path": "sitecore.framework.rules.api/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Api.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Api.xml",
-        "sitecore.framework.rules.api.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.api.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.api.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Core/3.0.1": {
-      "sha512": "JBGEAt6jcUt7RQhvxTmRrfd+L/NnaSnYgnpX9chuNXXLSsMmYPPK9XCdyabTLrQOXU75ZDd+eslbgLHtAhX0GQ==",
+    "Sitecore.Framework.Rules.Core/3.0.0": {
+      "sha512": "KH/zB7jWHnlYYN0WmfHQ5B691EwfJfEuS8cJFGmUWrXa4d2g2AZtfhM/Jfs8coGohC9X4ZV6BJTS4sYeQNR+Kg==",
       "type": "package",
-      "path": "sitecore.framework.rules.core/3.0.1",
+      "path": "sitecore.framework.rules.core/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Core.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Core.xml",
-        "sitecore.framework.rules.core.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.core.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.core.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Model/3.0.1": {
-      "sha512": "/WzSMI9Pm3mvw6IXZ4mlauqfsfk0j8mL5W/wjAdyW2JyegiuF4cc3p5lKFUaS18f/kGcXjShrUoTHze0feGL6A==",
+    "Sitecore.Framework.Rules.Model/3.0.0": {
+      "sha512": "z5Ijko5UcxVAlvWz3HYhmP96lJ3ss8k8ZYf5fIMOsSV5ROUbF+0dKLpXtitSSjerDXFgEKqEpS1nQ31Qw9PfhA==",
       "type": "package",
-      "path": "sitecore.framework.rules.model/3.0.1",
+      "path": "sitecore.framework.rules.model/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Model.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Model.xml",
-        "sitecore.framework.rules.model.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.model.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.model.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Registry/3.0.1": {
-      "sha512": "rIcM11pe4kpe0/O1crJvi0wUI2QCoSyJq2YADGJNuhCa+G7C3kZRrDrsx0Mjmr5IJuNK5HB7EB5sf00ZxKmb/A==",
+    "Sitecore.Framework.Rules.Registry/3.0.0": {
+      "sha512": "pJ41BH5I5BQV3jTqN1p7j3taHiwnGVwkQGRJGaZCkB/7Vxb3+f6h+vIfXRKPkmijqbDA6DcByxC6z8VQQd7LoA==",
       "type": "package",
-      "path": "sitecore.framework.rules.registry/3.0.1",
+      "path": "sitecore.framework.rules.registry/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Registry.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Registry.xml",
-        "sitecore.framework.rules.registry.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.registry.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.registry.nuspec"
       ]
     },
-    "Sitecore.Framework.Rules.Serialization/3.0.1": {
-      "sha512": "h0uIFc4dd+efCcpjezbQKbdYJa5rI0IWRBPU7pyfYapxWuiGkOEpBnr2xz6e0RMupSq5FELooc01rvLpeW0Reg==",
+    "Sitecore.Framework.Rules.Serialization/3.0.0": {
+      "sha512": "HcJ+CCCqOj6DDNq323tfi1NqQ36wHXmtCiOP8jbav4nJGk5kdxAT8awFbwFcmA+9qzyITCrIedO6hkYv1sbNVQ==",
       "type": "package",
-      "path": "sitecore.framework.rules.serialization/3.0.1",
+      "path": "sitecore.framework.rules.serialization/3.0.0",
       "files": [
         "lib/netstandard2.0/Sitecore.Framework.Rules.Serialization.dll",
         "lib/netstandard2.0/Sitecore.Framework.Rules.Serialization.xml",
-        "sitecore.framework.rules.serialization.3.0.1.nupkg.sha512",
+        "sitecore.framework.rules.serialization.3.0.0.nupkg.sha512",
         "sitecore.framework.rules.serialization.nuspec"
       ]
     },
@@ -5188,33 +5159,33 @@
         "sitecore.framework.runtime.common.nuspec"
       ]
     },
-    "Sitecore.Kernel.NoReferences/9.0.180604": {
-      "sha512": "YXfKbzWF1GPgsoJA/2h8ztZ6JM0oA1XmTAydBc+FwOqfpz2DrwDYHcD6SUJyZU2FHzOXqSSOe6QW1GM330/WPw==",
+    "Sitecore.Kernel.NoReferences/9.0.171219": {
+      "sha512": "iJen3KTTfV3j7m4K4iRELIhf/NDxREas/QHjV1JTKuhKIqx5/mmUAbA49j+R3a9bgD5B3GQRLimh7UbrrYSYtQ==",
       "type": "package",
-      "path": "sitecore.kernel.noreferences/9.0.180604",
+      "path": "sitecore.kernel.noreferences/9.0.171219",
       "files": [
         "lib/NET462/Sitecore.Kernel.dll",
-        "sitecore.kernel.noreferences.9.0.180604.nupkg.sha512",
+        "sitecore.kernel.noreferences.9.0.171219.nupkg.sha512",
         "sitecore.kernel.noreferences.nuspec"
       ]
     },
-    "Sitecore.Services.Client.NoReferences/9.0.180604": {
-      "sha512": "STz2ACQbCvZYOqmedTmSVdkeW4wFPAbBX+SuA1hKLC3PZWir2FMvjgms9yOVnbgAJiSHbKO9YH7zCFQmnhfuLA==",
+    "Sitecore.Services.Client.NoReferences/9.0.171219": {
+      "sha512": "dPae2QBbE9N0tKQjzrdZrmwBI9Cs3l3weo3Rz839ocs1AwNGDtI37Ql3KP7pLlJl6M7Ot3GhfuSpwZwml/RzRA==",
       "type": "package",
-      "path": "sitecore.services.client.noreferences/9.0.180604",
+      "path": "sitecore.services.client.noreferences/9.0.171219",
       "files": [
         "lib/NET462/Sitecore.Services.Client.dll",
-        "sitecore.services.client.noreferences.9.0.180604.nupkg.sha512",
+        "sitecore.services.client.noreferences.9.0.171219.nupkg.sha512",
         "sitecore.services.client.noreferences.nuspec"
       ]
     },
-    "Sitecore.Services.Core.NoReferences/9.0.180604": {
-      "sha512": "YiWuKT3db/YO1Q0lG60AfqlpSaCaB9LW437mJIom0lQXLrh2BgGh7ByUQ0Fqu8RFm2JXA4YQwU1xz84z+b9/Wg==",
+    "Sitecore.Services.Core.NoReferences/9.0.171219": {
+      "sha512": "Xxs/dX6Z+9zg0VQ9I69/51jqqXwiq1v/8YnE8qNnIP9oxu56Vaso4K9Rg6nfCBOMAon+hRWqDfcavqPmkEUNLA==",
       "type": "package",
-      "path": "sitecore.services.core.noreferences/9.0.180604",
+      "path": "sitecore.services.core.noreferences/9.0.171219",
       "files": [
         "lib/NET462/Sitecore.Services.Core.dll",
-        "sitecore.services.core.noreferences.9.0.180604.nupkg.sha512",
+        "sitecore.services.core.noreferences.9.0.171219.nupkg.sha512",
         "sitecore.services.core.noreferences.nuspec"
       ]
     },
@@ -5448,10 +5419,11 @@
       ]
     },
     "System.ComponentModel/4.0.1": {
-      "sha512": "oBZFnm7seFiVfugsIyOvQCWobNZs7FzqDV/B7tx20Ep/l3UUFCPDkdTnCNaJZTU27zjeODmy2C/cP60u3D4c9w==",
+      "sha512": "tN5DPMYg6yFO5lF5L5hF6TIZDcRQ/+f1YcXGP8y2Yy4971XoxPOLH4lkkL20v6zb4aAVsp+xrkRwzMFeR5ZHqw==",
       "type": "package",
       "path": "system.componentmodel/4.0.1",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6279,10 +6251,11 @@
       ]
     },
     "System.Net.Http/4.3.1": {
-      "sha512": "UrTyRczM3ZvNk6oetBuwlu67MFKKRva+r7bw4JDVZ6Y2IukyZ24td5ppsieu/4yZlogVAIuZul9GIQ3hoiz0yA==",
+      "sha512": "ptz3Ls/2L+NiIhqOSgTarvaHqzuHBKZIc65rvv6flWi0CYEgdA+FCRe1vdrCa2yZykHbOxIFBph1ktB0QTSe2A==",
       "type": "package",
       "path": "system.net.http/4.3.1",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -6359,19 +6332,21 @@
       ]
     },
     "System.Reactive/3.1.1": {
-      "sha512": "elkQdVQoBVX39BHrYHMc3Rnbb7a9qBJIwNCvhq1psPMOEPo62/VHB0lJu671x3fOrGL4V/85n6p2Az1tw7Kvmg==",
+      "sha512": "jdLBDt+bTs26kUA7R0P3JPYnYt2NKvyUIBW4aZb7JUQLGTfdBebdzKtY9pMTXrjj/QwRZSyKBqfGXzO4Mh7Q0Q==",
       "type": "package",
       "path": "system.reactive/3.1.1",
       "files": [
+        ".signature.p7s",
         "system.reactive.3.1.1.nupkg.sha512",
         "system.reactive.nuspec"
       ]
     },
     "System.Reactive.Core/3.1.1": {
-      "sha512": "CKWC+UP1aM75taNX+sTBn2P97uHIUjKxq+z45iy7P91QGFqNFleR2tsqIC76HMVvYl7o8oWyMiycdsc9rC1Z/g==",
+      "sha512": "s6kQTsHXXloJeT0Jo3MPThoRlc9LVGrHZ6rQo8Dvx3klnaIknQBy0/NjsUSAnGZHdCsJzQEnH08X2BG06ib1ZA==",
       "type": "package",
       "path": "system.reactive.core/3.1.1",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Reactive.Core.dll",
         "lib/net45/System.Reactive.Core.xml",
         "lib/net46/System.Reactive.Core.dll",
@@ -6395,10 +6370,11 @@
       ]
     },
     "System.Reactive.Interfaces/3.1.1": {
-      "sha512": "aNVY3QoRznGFeQ+w+bMqhD8ElNWoyYq+7XTQIoxKKjBOyTOjUqIMEf1wvSdtwC4y92zg2W9q38b4Sr6cYNHVLg==",
+      "sha512": "KSnc+j8WQLS2elGyxdqonTxpdtreANwhfD5kBw/m9bV0YcjL2DjgQg46F0HIOTEN45qGU1MN1MFX5fHbYnVEtA==",
       "type": "package",
       "path": "system.reactive.interfaces/3.1.1",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Reactive.Interfaces.dll",
         "lib/net45/System.Reactive.Interfaces.xml",
         "lib/netstandard1.0/System.Reactive.Interfaces.dll",
@@ -6408,10 +6384,11 @@
       ]
     },
     "System.Reactive.Linq/3.1.1": {
-      "sha512": "HwsZsoYRg51cLGBOEa0uoZ5+d4CMcHEg/KrbqePhLxoz/SLA+ULISphBtn3woABPATOQ6j5YgGZWh4jxnJ3KYQ==",
+      "sha512": "Hc3HKFiNWLoo2Qa+8daQIsQQYRxWfhsWhI9CW9NejTwVX9w72+1DDK2J/t1ezk7a45GRIvcPo1bMrZtpMEHO1Q==",
       "type": "package",
       "path": "system.reactive.linq/3.1.1",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Reactive.Linq.dll",
         "lib/net45/System.Reactive.Linq.xml",
         "lib/net46/System.Reactive.Linq.dll",
@@ -6427,10 +6404,11 @@
       ]
     },
     "System.Reactive.PlatformServices/3.1.1": {
-      "sha512": "jCJ3iGDLb4duOxZ/Uo3O7PssWE48uRp0fw92AlIwrMNaZRUmZNkZyqbl0nUT+joFARBYun8XiVIDQreMJKBedA==",
+      "sha512": "nWouPlttrYpZ0TALhhUqfxOIzs3ZA1ZwfHTlnP0SbuGaszKp+5kopaqyZ1sRmdlo8QXkfb+sRrDOA2hhxOpaGw==",
       "type": "package",
       "path": "system.reactive.platformservices/3.1.1",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Reactive.PlatformServices.dll",
         "lib/net45/System.Reactive.PlatformServices.xml",
         "lib/net46/System.Reactive.PlatformServices.dll",
@@ -6452,10 +6430,11 @@
       ]
     },
     "System.Reactive.Windows.Threading/3.1.1": {
-      "sha512": "y1TtaYaFKJBH0L3wbLVCV2Le5cNIyVczwZAULboPyFdKTIiRb7OGAZYigly8SjNC3NHwzrTHcF8WlkL0WjGUmA==",
+      "sha512": "R1Ng7KqGRBqPZqSqp4tjkzqTjl8mvkoO1cy65GuLZIEGYAZA3OMMwmcT06PKqaylpKOdczQOcT3G/YYMk4Vqyw==",
       "type": "package",
       "path": "system.reactive.windows.threading/3.1.1",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.Reactive.Windows.Threading.dll",
         "lib/net45/System.Reactive.Windows.Threading.xml",
         "lib/netcore451/System.Reactive.Windows.Threading.dll",
@@ -7330,10 +7309,11 @@
       ]
     },
     "System.Spatial/5.6.0": {
-      "sha512": "O5hFsuKD1vUwXw9TrsbQ7XMlkL5qWHNJYSEchsaCmxFI60ffa3FSHnqvOBHKzLplaiA3enVPufDPgv9xSrp11A==",
+      "sha512": "v9ZB3MXsdzS/yOsWyVTxar0LCQq0PfoaW5DVVMnmDUG1OfPhMjU3SAuc03jHUkWvoiKS8x3k4GRSm8FBvCrfQg==",
       "type": "package",
       "path": "system.spatial/5.6.0",
       "files": [
+        ".signature.p7s",
         "lib/net40/System.Spatial.dll",
         "lib/net40/System.Spatial.xml",
         "lib/net40/de/System.Spatial.resources.dll",
@@ -8053,16 +8033,16 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "Avalara.AvaTax >= 18.9.0.234",
-      "Sitecore.Commerce.Core >= 2.2.*",
-      "Sitecore.Commerce.Plugin.Catalog >= 2.2.46",
-      "Sitecore.Commerce.Plugin.Customers >= 2.2.10",
-      "Sitecore.Commerce.Plugin.Management >= 2.2.9",
-      "Sitecore.Commerce.Plugin.Tax >= 2.2.22",
-      "Sitecore.Commerce.Plugin.Views >= 2.2.29"
+      "Sitecore.Commerce.Core >= 2.1.6",
+      "Sitecore.Commerce.Plugin.Catalog >= 2.1.10",
+      "Sitecore.Commerce.Plugin.Customers >= 2.1.4",
+      "Sitecore.Commerce.Plugin.Management >= 2.1.4",
+      "Sitecore.Commerce.Plugin.Tax >= 2.1.5",
+      "Sitecore.Commerce.Plugin.Views >= 2.1.6"
     ]
   },
   "packageFolders": {
-    "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\packages": {},
+    "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\packages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -8071,17 +8051,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\src\\Sitecore.Commerce.Plugin.Avalara\\Sitecore.Commerce.Plugin.Avalara.csproj",
+      "projectUniqueName": "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\src\\Sitecore.Commerce.Plugin.Avalara\\Sitecore.Commerce.Plugin.Avalara.csproj",
       "projectName": "Sitecore.Commerce.Plugin.Avalara",
-      "projectPath": "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\src\\Sitecore.Commerce.Plugin.Avalara\\Sitecore.Commerce.Plugin.Avalara.csproj",
-      "packagesPath": "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\packages",
-      "outputPath": "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\src\\Sitecore.Commerce.Plugin.Avalara\\obj\\",
+      "projectPath": "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\src\\Sitecore.Commerce.Plugin.Avalara\\Sitecore.Commerce.Plugin.Avalara.csproj",
+      "packagesPath": "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\packages",
+      "outputPath": "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\src\\Sitecore.Commerce.Plugin.Avalara\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Sitecore\\XC902\\install\\Sitecore.Commerce.Engine.SDK.2.2.72\\NuGet.Config",
+        "C:\\Projects\\Sitecore.Commerce.Engine.SDK.2.1.10\\NuGet.Config",
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8114,27 +8094,27 @@
           },
           "Sitecore.Commerce.Core": {
             "target": "Package",
-            "version": "[2.2.*, )"
+            "version": "[2.1.6, )"
           },
           "Sitecore.Commerce.Plugin.Catalog": {
             "target": "Package",
-            "version": "[2.2.46, )"
+            "version": "[2.1.10, )"
           },
           "Sitecore.Commerce.Plugin.Customers": {
             "target": "Package",
-            "version": "[2.2.10, )"
+            "version": "[2.1.4, )"
           },
           "Sitecore.Commerce.Plugin.Management": {
             "target": "Package",
-            "version": "[2.2.9, )"
+            "version": "[2.1.4, )"
           },
           "Sitecore.Commerce.Plugin.Tax": {
             "target": "Package",
-            "version": "[2.2.22, )"
+            "version": "[2.1.5, )"
           },
           "Sitecore.Commerce.Plugin.Views": {
             "target": "Package",
-            "version": "[2.2.29, )"
+            "version": "[2.1.6, )"
           }
         }
       }

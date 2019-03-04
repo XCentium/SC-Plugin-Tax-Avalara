@@ -9,8 +9,6 @@ namespace Sitecore.Commerce.Plugin.Avalara.Components
 {
    public class ProductTaxSettingsComponent : Component
    {
-
        public string TaxCode { get; set; } = string.Empty;
-
     }
 }

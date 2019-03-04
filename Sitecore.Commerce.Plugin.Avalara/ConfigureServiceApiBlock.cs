@@ -19,39 +19,39 @@ namespace Sitecore.Commerce.Plugin.Avalara
         /// <returns></returns>
         public override Task<ODataConventionModelBuilder> Run(ODataConventionModelBuilder modelBuilder, CommercePipelineExecutionContext context)
         {
-            Condition.Requires(modelBuilder).IsNotNull($"{this.Name}: The argument cannot be null.");
+            Condition.Requires(modelBuilder).IsNotNull($"{this.Name}: {Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ArgumentNullText}");
 
 
             // Add unbound actions
-            var configuration4 = modelBuilder.Action("TestAvalaraConnection");
-            configuration4.ReturnsFromEntitySet<CommerceCommand>("Commands");
+            var configuration4 = modelBuilder.Action(Constants.Tax.TestAvalaraConnection);
+            configuration4.ReturnsFromEntitySet<CommerceCommand>(Constants.Tax.Commands);
 
 
             // Add unbound actions
-            var configuration5 = modelBuilder.Action("GetAvalaraConfiguration");
-            configuration5.ReturnsFromEntitySet<CommerceCommand>("Commands");
+            var configuration5 = modelBuilder.Action(Constants.Tax.GetAvalaraConfiguration);
+            configuration5.ReturnsFromEntitySet<CommerceCommand>(Constants.Tax.Commands);
 
 
 
             // Add unbound actions
-            var configuration2 = modelBuilder.Action("SaveAvalaraConfiguration");
-            configuration2.Parameter<string>("CompanyCode");
-            configuration2.Parameter<bool>("InProductionMode");
-            configuration2.Parameter<string>("AccountId");
-            configuration2.Parameter<string>("AppName");
-            configuration2.Parameter<string>("AppVersion");
-            configuration2.Parameter<string>("LicenseKey");
-            configuration2.Parameter<string>("ShipFromName");
-            configuration2.Parameter<string>("ShipFromAddressLine1");
-            configuration2.Parameter<string>("ShipFromAddressLine2");
-            configuration2.Parameter<string>("ShipFromAddressLine3");
-            configuration2.Parameter<string>("ShipFromCity");
-            configuration2.Parameter<string>("ShipFromStateOrProvinceCode");
-            configuration2.Parameter<string>("ShipFromPostalCode");
-            configuration2.Parameter<string>("ShipFromCountryCode");
-            configuration2.Parameter<bool>("Enabled");
-            configuration2.Parameter<bool>("DisableReporting");
-            configuration2.ReturnsFromEntitySet<CommerceCommand>("Commands");
+            var configuration2 = modelBuilder.Action(Constants.Tax.SaveAvalaraConfiguration);
+            configuration2.Parameter<string>(Constants.Tax.CompanyCode);
+            configuration2.Parameter<bool>(Constants.Tax.InProductionMode);
+            configuration2.Parameter<string>(Constants.Tax.AccountId);
+            configuration2.Parameter<string>(Constants.Tax.AppName);
+            configuration2.Parameter<string>(Constants.Tax.AppVersion);
+            configuration2.Parameter<string>(Constants.Tax.LicenseKey);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromName);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromAddressLine1);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromAddressLine2);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromAddressLine3);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromCity);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromStateOrProvinceCode);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromPostalCode);
+            configuration2.Parameter<string>(Constants.Tax.ShipFromCountryCode);
+            configuration2.Parameter<bool>(Constants.Tax.Enabled);
+            configuration2.Parameter<bool>(Constants.Tax.DisableReporting);
+            configuration2.ReturnsFromEntitySet<CommerceCommand>(Constants.Tax.Commands);
 
             return Task.FromResult(modelBuilder);
 
