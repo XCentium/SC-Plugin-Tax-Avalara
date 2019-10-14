@@ -1,0 +1,1566 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Avalara</name>
+    </assembly>
+    <members>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.ConfigureSitecore">
+            <summary>
+            The configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Constants">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Constants.Tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.CartNullText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.TaxFee">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.Lang">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.Us">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ProductTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.AllOthers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.CartLineNullText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.Price">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ItemId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.SitecoreItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ForwardSlash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.ConfigurationItemPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.Tax.DefaultTaxCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.View.AvalaraCategoryTaxSettingsView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.View.AvalaraProductTaxSettingsView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.View.AvalaraVariantTaxSettingsView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Constants.View.AvalaraCustomerTaxSettingsView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Controllers.CommandsController.TestAvalaraConnection(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.CompanyCode">
+            <summary>
+            Avalara Company Code
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.InProductionMode">
+            <summary>
+            Is this in production or test environment? Test connects to Sandbox
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.AccountId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromAddressLine1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromAddressLine2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromAddressLine3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromCity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromStateOrProvinceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromPostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Entities.AvalaraTaxEntity.ShipFromCountryCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Helpers.SitecoreItemHelper.GetFirstDecimalFromString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.Enabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.InProductionMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.CompanyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.TestUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ProductionUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.AppName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.AppVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.AccountId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromAddressLine1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromAddressLine2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromAddressLine3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromCity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromStateOrProvinceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromPostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraConfiguration.ShipFromCountryCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.amount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.taxCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.itemCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.RequestLine.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipFrom.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ShipTo.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderOrigin.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.PointOfOrderAcceptance.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Addresses.shipFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Addresses.shipTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Addresses.pointOfOrderOrigin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Addresses.pointOfOrderAcceptance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.lines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.companyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.customerCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.purchaseOrderNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.commit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.currencyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraRequest.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Detail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.transactionLineId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.addressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.stateFIPS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.exemptAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.exemptReasonId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.inState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.jurisCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.jurisName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.jurisdictionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.signatureCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.stateAssignedNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.jurisType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.nonTaxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.nonTaxableRuleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.nonTaxableType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.rate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.rateRuleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.rateSourceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.serCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.sourcing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxAuthorityTypeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxRegionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxOverride">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.rateType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.rateTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.taxableUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.nonTaxableUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.exemptUnits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Detail.unitOfBasis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.LineLocationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LineLocationType.documentLineLocationTypeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LineLocationType.documentLineId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LineLocationType.documentAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LineLocationType.locationTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.lineNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.boundaryOverrideId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.customerUsageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.destinationAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.originAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.discountAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.exemptAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.exemptCertId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.exemptNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.isItemTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.isSSTP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.itemCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.lineAmount">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.ref1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.ref2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.reportingDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.revAccount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.sourcing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxableAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxCodeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxOverrideType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.businessIdentificationNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxOverrideAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxOverrideReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.taxIncluded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.details">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.lineLocationTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.ResponseLine.parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.transactionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.boundaryLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.line1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.line2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.line3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.city">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.postalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.taxRegionId">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.latitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Address.longitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.LocationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LocationType.documentLocationTypeId">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LocationType.documentId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LocationType.documentAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.LocationType.locationTypeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Summary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.jurisType">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.jurisCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.jurisName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.taxAuthorityType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.stateAssignedNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.taxType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.taxName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.rateType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.taxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.rate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.tax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.taxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.nonTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.Summary.exemption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.Parameters2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.companyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.paymentDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.batchCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.currencyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.customerUsageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.customerVendorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.exemptNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.reconciled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.purchaseOrderNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.referenceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.salespersonCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.taxOverrideType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.taxOverrideAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.taxOverrideReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.totalAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.totalExempt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.totalTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.totalTaxable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.totalTaxCalculated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.adjustmentReason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.adjustmentDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.locked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.softwareVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.originAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.destinationAddressId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.exchangeRateEffectiveDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.exchangeRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.isSellerImporterOfRecord">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.businessIdentificationNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.modifiedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.modifiedUserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.taxDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.lines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.addresses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.locationTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.summary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Models.AvalaraResponse.parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.CommitAvalaraTaxBlock._getSellableItemCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.CommitAvalaraTaxBlock._findEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.CommitAvalaraTaxBlock._getItemByPathPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.CommitAvalaraTaxBlock._persistEntityPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.CommitAvalaraTaxBlock._getEntityViewCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartLinesTaxBlock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartLinesTaxBlock.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartLinesTaxBlock.ShippingParty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartLinesTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartTaxBlock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartTaxBlock.#ctor(Sitecore.Framework.Rules.IRuleEngine,Sitecore.Framework.Rules.IRuleCreator)">
+            <summary>
+            
+            </summary>
+            <param name="ruleEngine"></param>
+            <param name="ruleCreator"></param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartTaxBlock.ShippingParty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCalculateCartTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartLinesTaxBlock._getSellableItemCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartLinesTaxBlock._findEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartLinesTaxBlock._getItemByPathPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartLinesTaxBlock._persistEntityPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartLinesTaxBlock._getEntityViewCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartTaxBlock._getSellableItemCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartTaxBlock._findEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartTaxBlock._getItemByPathPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartTaxBlock._persistEntityPipeline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Avalara.Pipelines.Blocks.UpdateCartTaxBlock._getEntityViewCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.CompanyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.TestUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ProductionUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.InProductionMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.AccountId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromAddressLine1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromAddressLine2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromAddressLine3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromCity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromStateOrProvinceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromPostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Avalara.Policies.AvalaraPolicy.ShipFromCountryCode">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
